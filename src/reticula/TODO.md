@@ -1,0 +1,5 @@
+# reticula 
+
+* margenes
+* filas
+* columnas
