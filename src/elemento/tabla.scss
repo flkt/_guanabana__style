@@ -1,0 +1,35 @@
+@use 'sass:map';
+@use '../_variables_generales' as var;
+
+table {
+    border-collapse: collapse;
+    margin-top: map.get(var.$espaciado, 'identado');
+    margin-bottom: map.get(var.$espaciado, 'identado');
+}
+
+caption {
+    font-size: 1.125rem;
+    text-align: left;
+    padding-left: map.get(var.$espaciado, 'identado');
+    padding-right: map.get(var.$espaciado, 'identado');
+}
+
+thead {
+    border-bottom: 1px solid var(--line-color-bold);
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--line-color);
+}
+
+td, th {
+    padding: .5rem map.get(var.$espaciado, 'identado');
+}
+
+th {
+    font-weight: map.get(var.$main-font, 'weight');
+    font-size: max(.875rem, 12px);
+    line-height: calc(1em + .25rem);
+    text-align: left;
+    vertical-align: bottom;
+}

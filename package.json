@@ -1,0 +1,39 @@
+{
+  "name": "design-system",
+  "version": "0.0.0",
+  "description": "base para creacion y configuracion de sistemas de diseño a medida",
+  "main": "base.scss",
+  "scripts": {
+    "dev": "concurrently \"npm run dev-estilos\" \"npm run dev-localhost\" ",
+    "dev-localhost": "node index",
+    "dev-estilos": "sass --watch base.scss:docs/assets/css/base.css --style expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flkt/_design_system.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "responsive",
+    "accesibility",
+    "design-system"
+  ],
+  "author": "flkt.crnpio@gmail.com",
+  "files": [
+    "base.scss",
+    "src",
+    "README.md"
+  ],
+  "bugs": {
+    "url": "https://github.com/flkt/_design_system/issues"
+  },
+  "homepage": "https://github.com/flkt/_design_system#readme",
+  "dependencies": {
+    "sass": "^1.57.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "express": "^4.18.2"
+  }
+}

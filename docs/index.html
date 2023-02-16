@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="https://file.myfontastic.com/rD8bJfMb22HcoLdhJYvaPB/icons.css">
+    <title>Base Sistema de Diseño</title>
+    <style>
+        header, footer, main {
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p>Base para construcción de sistemas de diseño</p>
+        <nav>
+            <a href="#headings">Títulos</a>
+            <a href="#paragraphs">Parrafos</a>
+            <a href="#images">Imágenes</a>
+            <a href="#details">Acordeon</a>
+            <a href="#links">Enlaces</a>
+            <a href="#buttons">Botones</a>
+            <a href="#lists">Listas</a>
+            <a href="#tables">Tablas</a>
+        </nav>
+    </header>
+    <main>
+        <div id="headings">
+            <p class="titulo">Títulos</p>
+            <h1>h1</h1>
+            <h2>h2</h2>
+            <h3>h3</h3>
+            <h4>h4</h4>
+            <h5>h5</h5>
+            <h6>h6</h6>
+            <p class="titulo">Título Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+            <p class="subtitulo">Subtítulo. Id, excepturi eaque, ipsam dolor quos minus fugit reiciendis consequuntur possimus ab qui alias vel hic quod eveniet veritatis autem repudiandae inventore?</p>
+        </div>
+        <div id="paragraphs">
+            <p class="titulo">Estilos de parrafo</p>
+            <p>Parrafo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus velit nulla, <code>code</code> scelerisque quis aliquam eget, rhoncus tincidunt lacus. Aliquam blandit est lacinia fringilla pulvinar. Morbi sodales eros leo, sed ultrices nunc rutrum et. Morbi at magna ante <code>code</code>. Pellentesque tincidunt lectus a pharetra sodales. Phasellus ullamcorper elementum metus, ut consectetur libero lobortis eget. Nam mattis eros in ante tristique dignissim. Mauris elementum tempus dolor, eu luctus dolor consequat ac. Nullam et libero ac nibh rutrum faucibus quis gravida lectus.</p>
+            <p class="resaltado">Resaltado. Texto en formato grande para comenzar resaltando un breve resumen del proyecto, libro, reseña, etc.</p>
+            <p class="nota">Nota. El texto del tamaño más pequeño que puede existir en ele sitio.</p>
+            <p class="subtitulo">Estilos de texto en linea</p>
+            <p>
+                <b>bold</b>
+                <strong>strong</strong>
+                <small>small</small> normal
+                <i>italica</i> normal
+                <abbr title="abbr title">abreviación</abbr>
+                <ins>insertado</ins>
+                <del>eliminado</del>
+                <dfn>definición</dfn>
+                <sub>sub</sub> normal <sup>sup</sup>
+                <em>énfasis</em>
+                <cite>cita</cite>
+                <q cite="">cita</q>
+                <mark>mark texto marcado</mark>
+            </p>
+
+            <blockquote cite="http://es.lipsum.com/">
+                Cita Laaaaaarga Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus velit nulla, scelerisque quis aliquam eget, rhoncus tincidunt lacus. Aliquam blandit est lacinia fringilla pulvinar. Morbi sodales eros leo, sed ultrices nunc rutrum et. Morbi at magna ante. Pellentesque tincidunt lectus a pharetra sodales. Phasellus ullamcorper elementum metus, ut consectetur libero lobortis eget. Nam mattis eros in ante tristique dignissim. Mauris elementum tempus dolor, eu luctus dolor consequat ac. Nullam et libero ac nibh rutrum faucibus quis gravida lectus.
+            </blockquote>
+
+            <p class="subtitulo">Estilos de texto de código</p>
+            <p>
+                <code>código</code>
+                <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>design!</kbd>
+                <samp>Mensaje del sistema</samp>
+                <var>variable</var>
+            </p>
+            <pre>
+                Texto Preformateado
+
+                L
+                 o
+                  r 
+                   e
+                    m 
+                     ipsum dolor sit amet,
+                consectetur
+                adipisicing
+                elit.</pre>
+        </div>
+        <div id="images">
+            <p class="titulo">Imágenes</p>
+            <figure>
+                <img src="https://picsum.photos/800/400" alt="lorem picsum">
+                <img src="https://picsum.photos/400/400" alt="lorem picsum">
+                <figcaption>Lorem pictum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus et vel molestiae officiis in sit amet? Recusandae blanditiis consequatur maxime officiis nobis quae, perferendis quam totam aut, sequi modi placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dignissimos nostrum facere? Distinctio quibusdam sequi molestias voluptas, nam ipsa architecto, qui hic assumenda consectetur tempora harum autem officiis quia consequuntur.</figcaption>
+            </figure>
+            <picture>
+                <img src="https://picsum.photos/1200/300" alt="lorem picsum">
+            </picture>
+        </div>
+        <div id="details">
+            <p class="titulo">Acordeon</p>
+            <details>
+                <summary>Details Summary</summary>
+                <div>
+                    <p>En el summary va el título descriptivo o resumen de lo que se quiera hablar. Después va toda la demás información, detalle, descripción... además no importa que contenido se ponga, se puede utilizar cualquier etiqueta (o ninguna).</p>
+                </div>
+              </details>
+              <details>
+                <summary>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aliquid saepe totam adipisci animi, qui, numquam iusto beatae aut quam perferendis voluptatibus quas quia temporibus eius itaque impedit possimus aspernatur.</summary>
+                <div>
+                    <ul>
+                        <li>ejeles</li>
+                        <li>pos</li>
+                        <li>como</li>
+                        <li>crees</li>
+                    </ul>
+                </div>
+              </details>
+        </div>
+        <div id="links">
+            <p class="titulo">Enlaces</p>
+            <p>Lorem ipsum <a href="#links">enlace normal</a> dolor sit amet consectetur adipisicing elit. Necessitatibus eum, blanditiis placeat <a href="#links">enlacemuyperomylargoparacomprobarsisecortaeltextoyevitarromperlosmargenesdelestilodelgriddelavistaendondeestascosasextrañasocurran</a>, 
+            et repellat ratione iure cumque ullam officia a nam, magni voluptatibus minima quam odit incidunt asperiores veniam. Facilis.</p>
+            <p>
+                <a href="#links" class="link-discreto">link discreto</a> . <a href="#links" class="link-discreto">como pa lista</a> . <a href="#links" class="link-discreto">de pie de pagina</a>
+            </p>
+        </div>
+        <div id="buttons">
+            <p class="titulo">Botones</p>
+            <button type="button">Botón</button>
+            <button type="button" title="Botón desabilitado" disabled>Botón desabilitado</button>
+        </div>
+        <div id="lists">
+            <p class="titulo">Listas</p>
+            <p class="subtitulo">Ordenadas y desordenadas</p>
+            <ul>
+                <li>lista desordenada</li>
+                <li>estilos default</li>
+                <li>con circulitos como siempre</li>
+                <li>lista anidada
+                    <ol>
+                        <li>lista ordenada</li>
+                        <li>osea que tiene numeros</li>
+                    </ol>
+                </li>
+            </ul>
+            <ol>
+                <li>lista ordenada</li>
+                <li>osea que tiene numeros
+                    <ol>
+                        <li>mas listas anidadas</li>
+                        <li>con numeritos
+                            <ol>
+                                <li>mas listas anidadas</li>
+                                <li>con numeritos
+                                    <ol>
+                                        <li>mas listas anidadas</li>
+                                        <li>con numeritos</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li>na fancy que ver</li>
+            </ol>
+            
+            <p class="subtitulo">Lista detalle</p>
+            <dl>
+                <dt>titulo</dt>
+                <dd>description</dd>
+                <dt>titulo</dt>
+                <dd>description</dd>
+            </dl>
+        </div>
+        <div id="tables">
+            <p class="titulo">Tablas</p>
+            <table>
+                <caption>Nombre de la tabla</caption>
+                <thead>
+                    <tr>
+                        <th>cabecera</th>
+                        <th>nombres</th>
+                        <th>variables</th>
+                        <th>titulos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>contenido</td>
+                        <td>informacion</td>
+                        <td>valores</td>
+                        <td>descripciones</td>
+                    </tr>
+                    <tr>
+                        <td>contenido</td>
+                        <td>informacion</td>
+                        <td>valores</td>
+                        <td>descripciones</td>
+                    </tr>
+                    <tr>
+                        <td>contenido</td>
+                        <td>informacion</td>
+                        <td>valores</td>
+                        <td>descripciones</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <caption>Caption table</caption>
+                <thead>
+                  <tr>
+                    <th>thead con un titulotototote pa pegarlo al caption</th>
+                    <th>th</th>
+                    <th>titulo largo de cabecera</th>
+                    <th>cabecera de tabla</th>
+                    <th>cada uno de estos es un campo</th>
+                    <th>deberia estar al menos uno en dos lineas</th>
+                    <th>para saber bien como se comporta la tabla</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>y luego en el cuerpo de la tabla</td>
+                    <td>debe se estar centrado? o quizas arriba</td>
+                    <td>cual deberia de ser la mejor alineacion para leer una tabla?</td>
+                    <td>bueno , pues, probemoslo</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                  </tr>
+                  <tr>
+                    <td>y luego en el cuerpo de la tabla</td>
+                    <td>debe se estar centrado? o quizas arriba</td>
+                    <td>cual deberia de ser la mejor alineacion para leer una tabla?</td>
+                    <td>bueno , pues, probemoslo</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                  </tr>
+                  <tr>
+                    <td>y luego en el cuerpo de la tabla</td>
+                    <td>debe se estar centrado? o quizas arriba</td>
+                    <td>cual deberia de ser la mejor alineacion para leer una tabla?</td>
+                    <td>bueno , pues, probemoslo</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>creo que centrado esta bien</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </main>
+    <footer>
+        <p>
+            Para más proyectos de código abierto date una vuelta por el 
+            <a href="https://github.com/flkt/">github</a>
+        </p>
+        <p>
+            Pa cotorrear de código y cosas en general
+            <a href="https://mas.to/@flkt">mastodon</a> y
+            <a href="https://twitter.com/flktcrnpio">twitter</a>
+        </p>
+        <p>
+            Pa ver dibujitos que hago en pixelart o dar el roll, acá ta el   
+            <a href="https://www.instagram.com/flkt_crnpio/">insta</a>
+        </p>
+        <p>
+            El fb es na mas pa mi mami... ni me busquen por allá
+        </p>
+    </footer>
+</body>
+</html>

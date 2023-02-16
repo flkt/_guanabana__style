@@ -1,0 +1,451 @@
+@charset "UTF-8";
+:root {
+  --main-font-size: 16px;
+}
+
+:root {
+  --main-background-color: #fff;
+  --main-font-color: #333;
+  --mark-background-color: #ffe600;
+  --code-background-color: #150b2b;
+  --code-font-color: #7afff2;
+  --var-font-color: #00b8a5;
+  --heading-font-color: #000;
+  --line-color: #ddd;
+  --line-color-bold: #777;
+  --selection-background-color: #4722ff;
+  --selection-font-color: #fff;
+  --link-font-color: #4722ff;
+  --link-background-color: #00ffae;
+  --button-background-color: transparent;
+  --button-border-color: #4722ff;
+  --button-font-color: #4722ff;
+  --button-background-color-hover: #4722ff;
+  --button-border-color-hover: #4722ff;
+  --button-font-color-hover: #00ffae;
+  --outline-color: #4722ff;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  max-width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: clamp(12px, var(--main-font-size), 48px);
+}
+
+body {
+  background-color: var(--main-background-color);
+  color: var(--main-font-color);
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: calc(1em + 0.5rem);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, a, th, td {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary, form, iframe {
+  display: block;
+}
+
+iframe, img {
+  border: none;
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+}
+
+figure, picture, img, svg, [disabled] {
+  pointer-events: none;
+}
+
+a, button, summary {
+  transition: all 0.27s ease-in-out;
+}
+a:focus, button:focus, summary:focus {
+  outline: solid 2px var(--outline-color);
+}
+
+a, button, summary, input, output, select, textarea, meter, ::file-selector-button {
+  font: inherit;
+}
+
+a, button, summary, select, input[type=button], input[type=submit], input[type=reset], ::file-selector-button {
+  cursor: pointer;
+}
+
+::-webkit-selection {
+  background-color: var(--selection-background-color);
+  color: var(--selection-font-color);
+}
+
+::-moz-selection {
+  background-color: var(--selection-background-color);
+  color: var(--selection-font-color);
+}
+
+::selection {
+  background-color: var(--selection-background-color);
+  color: var(--selection-font-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: calc(1em + 0.5rem);
+  color: var(--heading-font-color);
+}
+
+.titulo {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: calc(1em + 0.5rem);
+  color: var(--heading-font-color);
+  margin-top: 3rem;
+  font-size: 3rem;
+  line-height: 1em;
+}
+
+.subtitulo {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: calc(1em + 0.5rem);
+  color: var(--heading-font-color);
+  font-size: 2rem;
+  line-height: 1em;
+}
+
+p, pre, blockquote {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+abbr, ins, mark {
+  font-size: clamp(12px, 1em, 48px);
+}
+
+abbr, ins {
+  text-decoration: none;
+}
+
+abbr {
+  border-bottom: 1px dotted var(--main-font-color);
+  cursor: help;
+}
+
+ins {
+  border-bottom: 1px dashed var(--main-font-color);
+}
+
+small, sub, sup {
+  font-size: clamp(12px, 0.75em, 48px);
+}
+
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25rem;
+}
+
+sup {
+  top: -0.5rem;
+}
+
+mark {
+  background-color: var(--mark-background-color);
+  padding: 0.25rem 0.5rem;
+}
+
+blockquote {
+  font-size: 1.15rem;
+  line-height: calc(1em + 0.5rem);
+  padding: 2rem;
+}
+blockquote::before {
+  font-family: "flkt-font";
+}
+
+code, pre, samp {
+  font-family: monospace;
+  font-weight: 400;
+  font-size: 1em;
+  font-style: normal;
+  border-radius: 3px;
+  padding: 0.25rem 0.5rem;
+  white-space: pre-wrap;
+  background-color: var(--code-background-color);
+  border: 1px solid var(--code-background-color);
+  color: var(--code-font-color);
+}
+
+samp::before {
+  content: "‹_ ";
+  color: var(--var-font-color);
+}
+
+kbd {
+  font-family: monospace;
+  font-weight: 400;
+  font-size: 1em;
+  font-style: normal;
+  border-radius: 3px;
+  padding: 0.25rem 0.5rem;
+  white-space: pre-wrap;
+  border: 1px solid var(--code-background-color);
+}
+
+var {
+  font-family: monospace;
+  font-weight: 400;
+  font-size: 1em;
+  font-style: normal;
+  border-radius: 3px;
+  padding: 0.25rem 0.5rem;
+  white-space: pre-wrap;
+  color: var(--var-font-color);
+}
+
+.resaltado {
+  font-size: clamp(12px, var(--main-font-size), 48px);
+  line-height: calc(1em + 0.5rem);
+  color: var(--main-font-color);
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.nota {
+  font-size: clamp(12px, var(--main-font-size), 48px);
+  line-height: calc(1em + 0.5rem);
+  color: var(--main-font-color);
+  font-size: 0.75rem;
+}
+
+details {
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: var(--line-color);
+  padding: 0 1rem;
+  transition: all 0.27s ease-in-out;
+}
+details summary {
+  font-size: 1.15rem;
+  margin: 1rem 0 1rem;
+  padding-right: 2rem;
+  position: relative;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary::after {
+  content: "a";
+  font-family: "flkt-font";
+  right: 0;
+  top: 0;
+  width: 1rem;
+  position: absolute;
+  transition: all 0.27s ease-in-out;
+}
+details summary:hover, details summary:focus {
+  color: var(--outline-color);
+}
+details summary:focus {
+  outline-offset: 1rem;
+}
+details[open] summary {
+  outline-color: transparent;
+}
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+details + details {
+  border-top: none;
+}
+
+figure {
+  display: block;
+  clear: both;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+figure img {
+  float: left;
+  max-width: 100%;
+}
+figure figcaption {
+  font-size: clamp(12px, 0.75rem, 48px);
+  line-height: calc(1em + 0.25rem);
+  display: block;
+  clear: both;
+  margin: 0;
+  padding: 0.25rem 1rem 0;
+}
+
+picture {
+  display: inline-block;
+}
+picture img {
+  max-width: 100%;
+}
+
+ol, ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  list-style-position: outside;
+}
+ol ol, ol ul, ul ol, ul ul {
+  margin: 0;
+  font-size: max(0.875rem, 12px);
+}
+
+ol ol li::marker {
+  content: counters(list-item, ".") "  ";
+}
+
+dl {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+dl dd {
+  font-size: max(0.875rem, 12px);
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+caption {
+  font-size: 1.125rem;
+  text-align: left;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+thead {
+  border-bottom: 1px solid var(--line-color-bold);
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--line-color);
+}
+
+td, th {
+  padding: 0.5rem 1rem;
+}
+
+th {
+  font-weight: 400;
+  font-size: max(0.875rem, 12px);
+  line-height: calc(1em + 0.25rem);
+  text-align: left;
+  vertical-align: bottom;
+}
+
+a {
+  display: inline;
+  border-radius: 1px;
+  transition: all 0.27s ease-in-out;
+}
+a:focus {
+  outline-offset: 0.15em;
+}
+a:active {
+  outline: none;
+}
+
+a {
+  color: var(--main-font-color);
+  text-decoration-color: var(--link-background-color);
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 0.5em;
+  text-underline-offset: -0.15em;
+}
+
+a:hover {
+  color: var(--main-font-color);
+  text-decoration-thickness: 0.95em;
+  text-underline-offset: -0.95em;
+}
+
+.link-discreto {
+  color: var(--link-font-color);
+  text-decoration-skip-ink: auto;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 0.05em;
+  text-underline-offset: -0.15em;
+}
+
+.link-discreto:hover {
+  color: var(--link-font-color);
+  text-decoration-color: var(--link-font-color);
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: 0.15em;
+  text-underline-offset: 0.15em;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+}
+button:focus {
+  outline-offset: 0em;
+  outline-width: 0.25em;
+}
+
+button {
+  background-color: var(--button-background-color);
+  border-color: var(--button-border-color);
+  color: var(--button-font-color);
+  border-width: 1px;
+  border-radius: 2px;
+  padding: 0.5rem 2rem;
+}
+
+button:hover {
+  background-color: var(--button-background-color-hover);
+  border-color: var(--button-border-color-hover);
+  color: var(--button-font-color-hover);
+}
+
+button:disabled {
+  background: var(--line-color);
+  border-color: var(--line-color);
+  color: var(--line-color-bold);
+}
+
+/*# sourceMappingURL=base.css.map */

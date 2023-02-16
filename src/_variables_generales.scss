@@ -1,0 +1,140 @@
+// variables de SASS que deben compilarse
+// para homologar los estilos de espacio, tamaño, posición, profundidad
+
+$breakpoints: (
+    'cel': 320px,
+    'lap': 768px,
+    'esc': 1280px
+);
+
+$espaciado: (
+  '0': 0,
+  '1': 8px,
+  '2': 16px,
+  '3': 24px,
+  '4': 32px,
+  '5': 40px,
+  '6': 48px,
+  '7': 56px,
+  '8': 64px,
+  '9': 72px,
+  '10': 80px,
+  'minimo': 4px,
+  'identado': 1rem,
+  'sangria': 2rem
+);
+
+$main-font: (
+    'family': sans-serif,
+    'weight': 400,
+    'style': normal,
+    'minimo': 12px,
+    'maximo': 48px
+);
+
+$code-font: (
+    'family': monospace,
+    'weight': 400,
+    'size': 1em,
+    'style': normal
+);
+
+$paragraph-font: (
+    'summary': 1.15rem,
+    'blockquote': 1.15rem,
+    'elements': (
+        '.resaltado': (
+            'font-size': 1.5rem,
+            'margin-top': 1rem,
+            'margin-bottom': 1rem,
+        ),
+        '.nota': (
+            'font-size': .75rem,
+        )
+    )
+);
+
+$heading-font: (
+    'family': sans-serif,
+    'weight': 500,
+    'style': normal,
+    'elements': (
+        '.titulo': (
+            'margin-top': 3rem,
+            'font-size': 3rem,
+            'line-height': 1em,
+        ),
+        '.subtitulo': (
+            'font-size': 2rem,
+            'line-height': 1em,
+        )
+    )
+);
+
+$link: (
+    'styles': (
+        'a': (
+            'base': (
+                'color': var(--main-font-color),
+                'text-decoration-color': var(--link-background-color),
+                'text-decoration-skip-ink': none,
+                'text-decoration-thickness': 0.5em,
+                'text-underline-offset': -0.15em,
+            ),
+            'hover': (
+                'color': var(--main-font-color),
+                'text-decoration-thickness': 0.95em,
+                'text-underline-offset': -0.95em
+            )
+        ),
+        '.link-discreto': (
+            'base': (
+                'color': var(--link-font-color),
+                'text-decoration-skip-ink': auto,
+                'text-decoration-color': transparent,
+                'text-decoration-thickness': 0.05em,
+                'text-underline-offset': -0.15em,
+            ),
+            'hover': (
+                'color': var(--link-font-color),
+                'text-decoration-color': var(--link-font-color),
+                'text-decoration-skip-ink': auto,
+                'text-decoration-thickness': 0.15em,
+                'text-underline-offset': 0.15em,
+            )
+        ),
+    ),
+);
+
+$button: (
+    'styles': (
+        'button': (
+            'base': (
+                'background-color': var(--button-background-color),
+                'border-color': var(--button-border-color),
+                'color': var(--button-font-color),
+                'border-width': 1px,
+                'border-radius': 2px,
+                'padding': .5rem 2rem,
+            ),
+            'hover': (
+                'background-color': var(--button-background-color-hover),
+                'border-color': var(--button-border-color-hover),
+                'color': var(--button-font-color-hover),
+            ),
+            'disabled': (
+                'background': var(--line-color),
+                'border-color': var(--line-color),
+                'color': var(--line-color-bold),
+            )
+        )
+    ),
+    'sizes': (
+        'button': (
+            'font-size': 1.15rem,
+            'line-height': 1em,
+            'padding-y': .5rem,
+            'padding-x': 2rem,
+        )
+    )
+);

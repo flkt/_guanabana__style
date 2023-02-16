@@ -1,0 +1,35 @@
+@use 'sass:map';
+@use '../_variables_generales' as var;
+
+a {
+    display: inline;
+    border-radius: 1px;
+    transition: all .27s ease-in-out;
+    &:focus {
+        outline-offset: 0.15em;
+    }
+    &:active {
+        outline: none;
+    }
+}
+
+@if map.has-key(var.$link, 'styles') {
+    @each $nombre, $elementos in map.get(var.$link, 'styles') {
+        @each $estado, $atributos in $elementos {
+            @if $estado == 'base' {
+                #{$nombre} {
+                    @each $atributo, $valor in $atributos {
+                        #{$atributo}: #{$valor};
+                    }
+                }    
+            }
+            @else {
+                #{$nombre}:#{$estado} {
+                    @each $atributo, $valor in $atributos {
+                        #{$atributo}: #{$valor};
+                    }
+                }
+            }
+        }
+    }
+}

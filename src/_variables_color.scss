@@ -1,0 +1,32 @@
+// variables de CSS que pueden sobreescribirse al vuelo
+// para crear las paletas de color y contraste
+:root {
+    --main-background-color: #fff;
+    --main-font-color: #333;
+
+    --mark-background-color: #ffe600;
+
+    --code-background-color: #150b2b;
+    --code-font-color: #7afff2;
+    --var-font-color: #00b8a5;
+
+    --heading-font-color: #000;
+
+    --line-color: #ddd;
+    --line-color-bold: #777;
+    
+    --selection-background-color: #4722ff;
+    --selection-font-color: #fff;
+    
+    --link-font-color: #4722ff;
+    --link-background-color: #00ffae;
+
+    --button-background-color: transparent;
+    --button-border-color: #4722ff;
+    --button-font-color: #4722ff;
+    --button-background-color-hover: #4722ff;
+    --button-border-color-hover: #4722ff;
+    --button-font-color-hover: #00ffae;
+    
+    --outline-color: #4722ff;
+}

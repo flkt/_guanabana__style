@@ -1,0 +1,29 @@
+@use 'sass:map';
+@use '../_variables_generales' as var;
+
+ol, ul {
+    margin-top: map.get(var.$espaciado, 'identado');
+    margin-bottom: map.get(var.$espaciado, 'identado');
+    padding-left: map.get(var.$espaciado, 'sangria');
+    padding-right: map.get(var.$espaciado, 'identado');
+    list-style-position: outside;
+    ol, ul {
+        margin: 0;
+        font-size: max(.875rem, 12px);
+    }
+}
+ol ol {
+    li::marker {
+        content: counters(list-item,'.') '  ';
+    }
+}
+
+dl {
+    margin-top: map.get(var.$espaciado, 'identado');
+    margin-bottom: map.get(var.$espaciado, 'identado');
+    padding-left: map.get(var.$espaciado, 'identado');
+    padding-right: map.get(var.$espaciado, 'identado');
+    dd {
+        font-size: max(.875rem, 12px);
+    }
+}

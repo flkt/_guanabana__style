@@ -1,0 +1,45 @@
+@use 'sass:map';
+@use '../_variables_generales' as var;
+
+details {
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: var(--line-color);
+    padding: 0 map.get(var.$espaciado, 'identado');
+    transition: all .27s ease-in-out;
+    summary {
+        font-size: map.get(var.$paragraph-font, 'summary');
+        margin: 1rem 0 1rem;
+        padding-right: 2rem;
+        position: relative;
+        &::-webkit-details-marker {
+            display:none;
+        }
+        &::after {
+            content: "\61";
+            font-family: "flkt-font";
+            right: 0;
+            top: 0;
+            width: 1rem;
+            position: absolute;
+            transition: all .27s ease-in-out;
+        }
+        &:hover, &:focus {
+            color: var(--outline-color);
+        }
+        &:focus {
+            outline-offset: 1rem;
+        }
+    }
+    &[open] {
+        summary {
+            outline-color: transparent;
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+details + details {
+    border-top: none;
+}
