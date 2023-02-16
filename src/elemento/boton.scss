@@ -9,6 +9,7 @@ button {
     &:focus {
         outline-offset: 0em;
         outline-width: 0.25em;
+        outline-color: var(--button-outline-color);
     }
 }
 
