@@ -8,6 +8,7 @@ details {
     padding: 0 map.get(var.$espaciado, 'identado');
     transition: all .27s ease-in-out;
     summary {
+        color: var(--detail-font-color);
         font-size: map.get(var.$paragraph-font, 'summary');
         margin: 1rem 0 1rem;
         padding-right: 2rem;
@@ -25,7 +26,7 @@ details {
             transition: all .27s ease-in-out;
         }
         &:hover, &:focus {
-            color: var(--outline-color);
+            color: var(--detail-font-color-hover);
         }
         &:focus {
             outline-offset: 1rem;
