@@ -9,7 +9,7 @@ ol, ul {
     list-style-position: outside;
     ol, ul {
         margin: 0;
-        font-size: max(.875rem, 12px);
+        font-size: map.get(var.$list, 'nested');
     }
 }
 ol ol {
@@ -23,7 +23,10 @@ dl {
     margin-bottom: map.get(var.$espaciado, 'identado');
     padding-left: map.get(var.$espaciado, 'identado');
     padding-right: map.get(var.$espaciado, 'identado');
+    dt {
+        font-size: map.get(var.$list, 'dt');
+    }
     dd {
-        font-size: max(.875rem, 12px);
+        font-size: map.get(var.$list, 'dd');
     }
 }

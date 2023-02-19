@@ -1,3 +1,4 @@
+@use "sass:map";
 // variables de SASS que deben compilarse
 // para homologar los estilos de espacio, tamaño, posición, profundidad
 
@@ -8,20 +9,19 @@ $breakpoints: (
 );
 
 $espaciado: (
-  '0': 0,
-  '1': 8px,
-  '2': 16px,
-  '3': 24px,
-  '4': 32px,
-  '5': 40px,
-  '6': 48px,
-  '7': 56px,
-  '8': 64px,
-  '9': 72px,
-  '10': 80px,
-  'minimo': 4px,
+  'minimo': 0.25rem,
+  'medio': 0.5rem,
   'identado': 1rem,
   'sangria': 2rem
+);
+
+$margen: (
+    '0': 0,
+    '1': 4px,
+    '2': 8px,
+    '3': 16px,
+    '4': 32px,
+    '5': 64px
 );
 
 $main-font: (
@@ -40,7 +40,6 @@ $code-font: (
 );
 
 $paragraph-font: (
-    'summary': 1.15rem,
     'blockquote': 1.15rem,
     'elements': (
         '.resaltado': (
@@ -69,6 +68,21 @@ $heading-font: (
             'line-height': 1em,
         )
     )
+);
+
+$detail: (
+    'summary': 1.15rem
+);
+
+$table: (
+    'caption': 1.125rem,
+    'th': max(.875rem, 12px)
+);
+
+$list: (
+    'nested': max(.875rem, 12px),
+    'dt': 1rem,
+    'dd': max(.875rem, 12px)
 );
 
 $link: (
@@ -128,13 +142,23 @@ $button: (
                 'color': var(--line-color-bold),
             )
         )
-    ),
-    'sizes': (
-        'button': (
-            'font-size': 1.15rem,
-            'line-height': 1em,
-            'padding-y': .5rem,
-            'padding-x': 2rem,
-        )
+    )
+);
+
+$container: (
+    'cel': (
+        'ancho-maximo': 100%,
+        'ancho-lectura': 100%,
+        'margen-interior': map.get($margen,'3')
+        ),
+    'lap': (
+        'ancho-maximo': 100%,
+        'ancho-lectura': 600px,
+        'margen-interior': map.get($margen,'4')
+        ),
+    'esc': (
+        'ancho-maximo': 100%,
+        'ancho-lectura': 720px,
+        'margen-interior': map.get($margen,'5')
     )
 );

@@ -16,7 +16,7 @@ figure {
         display: block;
         clear: both;
         margin: 0;
-        padding: .25rem map.get(var.$espaciado, 'identado') 0;
+        padding: map.get(var.$espaciado, 'minimo') map.get(var.$espaciado, 'identado') 0;
     }
 }
 

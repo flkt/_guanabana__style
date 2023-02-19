@@ -8,7 +8,7 @@ table {
 }
 
 caption {
-    font-size: 1.125rem;
+    font-size: map.get(var.$table, 'caption');
     text-align: left;
     padding-left: map.get(var.$espaciado, 'identado');
     padding-right: map.get(var.$espaciado, 'identado');
@@ -28,7 +28,7 @@ td, th {
 
 th {
     font-weight: map.get(var.$main-font, 'weight');
-    font-size: max(.875rem, 12px);
+    font-size: map.get(var.$table, 'th');
     line-height: calc(1em + .25rem);
     text-align: left;
     vertical-align: bottom;

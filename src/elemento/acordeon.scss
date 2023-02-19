@@ -1,6 +1,8 @@
 @use 'sass:map';
 @use '../_variables_generales' as var;
 
+$icono: 1rem;
+
 details {
     border-width: 1px 0;
     border-style: solid;
@@ -9,9 +11,9 @@ details {
     transition: all .27s ease-in-out;
     summary {
         color: var(--detail-font-color);
-        font-size: map.get(var.$paragraph-font, 'summary');
-        margin: 1rem 0 1rem;
-        padding-right: 2rem;
+        font-size: map.get(var.$detail, 'summary');
+        margin: map.get(var.$espaciado, 'identado') 0;
+        padding-right: calc($icono * 2);
         position: relative;
         &::-webkit-details-marker {
             display:none;
@@ -21,7 +23,7 @@ details {
             font-family: "flkt-font";
             right: 0;
             top: 0;
-            width: 1rem;
+            width: $icono;
             position: absolute;
             transition: all .27s ease-in-out;
         }
