@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="https://file.myfontastic.com/rD8bJfMb22HcoLdhJYvaPB/icons.css">
     <title>Base Sistema de Diseño</title>
     <style>
-        header, footer, main {
-            padding: 1rem;
-        }
+        .grid > div { background-color: #0cf1;}
     </style>
 </head>
 <body>
@@ -28,7 +26,7 @@
         </nav>
     </header>
     <main>
-        <div id="headings">
+        <section id="headings">
             <p class="titulo">Títulos</p>
             <h1>h1</h1>
             <h2>h2</h2>
@@ -38,8 +36,8 @@
             <h6>h6</h6>
             <p class="titulo">Título Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
             <p class="subtitulo">Subtítulo. Id, excepturi eaque, ipsam dolor quos minus fugit reiciendis consequuntur possimus ab qui alias vel hic quod eveniet veritatis autem repudiandae inventore?</p>
-        </div>
-        <div id="paragraphs">
+        </section>
+        <section class="contenedor-lectura" id="paragraphs">
             <p class="titulo">Estilos de parrafo</p>
             <p>Parrafo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus velit nulla, <code>code</code> scelerisque quis aliquam eget, rhoncus tincidunt lacus. Aliquam blandit est lacinia fringilla pulvinar. Morbi sodales eros leo, sed ultrices nunc rutrum et. Morbi at magna ante <code>code</code>. Pellentesque tincidunt lectus a pharetra sodales. Phasellus ullamcorper elementum metus, ut consectetur libero lobortis eget. Nam mattis eros in ante tristique dignissim. Mauris elementum tempus dolor, eu luctus dolor consequat ac. Nullam et libero ac nibh rutrum faucibus quis gravida lectus.</p>
             <p class="resaltado">Resaltado. Texto en formato grande para comenzar resaltando un breve resumen del proyecto, libro, reseña, etc.</p>
@@ -84,8 +82,8 @@
                 consectetur
                 adipisicing
                 elit.</pre>
-        </div>
-        <div id="images">
+        </section>
+        <section id="images">
             <p class="titulo">Imágenes</p>
             <figure>
                 <img src="https://picsum.photos/800/400" alt="lorem picsum">
@@ -95,41 +93,39 @@
             <picture>
                 <img src="https://picsum.photos/1200/300" alt="lorem picsum">
             </picture>
-        </div>
-        <div id="details">
+        </section>
+        <section id="details">
             <p class="titulo">Acordeon</p>
             <details>
                 <summary>Details Summary</summary>
-                <div>
-                    <p>En el summary va el título descriptivo o resumen de lo que se quiera hablar. Después va toda la demás información, detalle, descripción... además no importa que contenido se ponga, se puede utilizar cualquier etiqueta (o ninguna).</p>
-                </div>
+                <p>En el summary va el título descriptivo o resumen de lo que se quiera hablar. Después va toda la demás información, detalle, descripción... además no importa que contenido se ponga, se puede utilizar cualquier etiqueta (o ninguna).</p>
               </details>
               <details>
                 <summary>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aliquid saepe totam adipisci animi, qui, numquam iusto beatae aut quam perferendis voluptatibus quas quia temporibus eius itaque impedit possimus aspernatur.</summary>
-                <div>
-                    <ul>
-                        <li>ejeles</li>
-                        <li>pos</li>
-                        <li>como</li>
-                        <li>crees</li>
-                    </ul>
-                </div>
+                <p>parrafo</p>
+                <ul>
+                    <li>lista</li>
+                    <li>ejeles</li>
+                    <li>pos</li>
+                    <li>como</li>
+                    <li>crees</li>
+                </ul>
               </details>
-        </div>
-        <div id="links">
+        </section>
+        <section id="links">
             <p class="titulo">Enlaces</p>
             <p>Lorem ipsum <a href="#links">enlace normal</a> dolor sit amet consectetur adipisicing elit. Necessitatibus eum, blanditiis placeat <a href="#links">enlacemuyperomylargoparacomprobarsisecortaeltextoyevitarromperlosmargenesdelestilodelgriddelavistaendondeestascosasextrañasocurran</a>, 
             et repellat ratione iure cumque ullam officia a nam, magni voluptatibus minima quam odit incidunt asperiores veniam. Facilis.</p>
             <p>
                 <a href="#links" class="link-discreto">link discreto</a> . <a href="#links" class="link-discreto">como pa lista</a> . <a href="#links" class="link-discreto">de pie de pagina</a>
             </p>
-        </div>
-        <div id="buttons">
+        </section>
+        <section id="buttons">
             <p class="titulo">Botones</p>
             <button type="button">Botón</button>
             <button type="button" title="Botón desabilitado" disabled>Botón desabilitado</button>
-        </div>
-        <div id="lists">
+        </section>
+        <section id="lists">
             <p class="titulo">Listas</p>
             <p class="subtitulo">Ordenadas y desordenadas</p>
             <ul>
@@ -171,8 +167,8 @@
                 <dt>titulo</dt>
                 <dd>description</dd>
             </dl>
-        </div>
-        <div id="tables">
+        </section>
+        <section id="tables">
             <p class="titulo">Tablas</p>
             <table>
                 <caption>Nombre de la tabla</caption>
@@ -248,7 +244,48 @@
                   </tr>
                 </tbody>
               </table>
-        </div>
+        </section>
+        <section>
+            <p class="titulo">Reticula</p>
+            <p class="subtitulo">grid</p>
+            <div class="grid">
+                <div class="c-1 p-3 m-y-1">c-1</div>
+                <div class="c-6 p-3 m-y-1">c-6</div>
+            </div>
+            <div class="grid">
+                <div class="c-2 p-3 m-y-1">c-2</div>
+                <div class="c-5 p-3 m-y-1">c-5</div>
+            </div>
+            <div class="grid">
+                <div class="c-3 p-3 m-y-1">c-3</div>
+                <div class="c-4 p-3 m-y-1">c-4</div>
+            </div>
+            <div class="grid">
+                <div class="c-7 p-3 m-y-1">c-7</div>
+            </div>
+            <p>enfila</p>
+            <div class="grid m-t-3">
+                <div class="c-1 p-3 m-y-1">c-1</div>
+            </div>
+            <div class="grid">
+                <div class="c-2 p-3 m-y-1">c-2</div>
+            </div>
+            <div class="grid">
+                <div class="c-3 p-3 m-y-1">c-3</div>
+            </div>
+            <div class="grid">
+                <div class="c-4 p-3 m-y-1">c-4</div>
+            </div>
+            <div class="grid">
+                <div class="c-5 p-3 m-y-1">c-5</div>
+            </div>
+            <div class="grid">
+                <div class="c-6 p-3 m-y-1">c-6</div>
+            </div>
+            <div class="grid">
+                <div class="c-7 p-3 m-y-1">c-7</div>
+            </div>
+        </section>
     </main>
     <footer>
         <p>
