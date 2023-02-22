@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "base para creacion y configuracion de sistemas de diseño a medida",
   "main": "base.scss",
   "scripts": {
