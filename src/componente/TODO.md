@@ -1,5 +1,0 @@
-# componentes
-
-* menu
-* navegacion
-* paginacion

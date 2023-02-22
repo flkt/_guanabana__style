@@ -26,6 +26,14 @@
   --button-border-color-hover: #4722ff;
   --button-font-color-hover: #00ffae;
   --button-outline-color: #4722ff33;
+  --menu-background-color: transparent;
+  --menu-border-color: var(--line-color);
+  --menu-font-color: var(--main-font-color);
+  --menu-item-background-color: transparent;
+  --menu-item-font-color: #4722ff;
+  --menu-item-background-color-hover: #4722ff22;
+  --menu-item-font-color-hover: #4722ff;
+  --menu-item-outline-color: #4722ff33;
   --outline-color: #4722ff;
 }
 
@@ -2011,6 +2019,79 @@ button:disabled {
     padding-top: 64px;
     padding-bottom: 64px;
   }
+}
+menu {
+  display: inline-block;
+  list-style: none;
+  border-style: solid;
+  background-color: var(--menu-background-color);
+  border-width: 1px;
+  border-color: var(--menu-border-color);
+  border-radius: 6px;
+  color: var(--menu-font-color);
+  padding: 0 0.5rem;
+}
+menu li {
+  margin: 0;
+  padding: 0;
+}
+menu li:first-child .menu-elemento {
+  border-radius: 6px 6px 0 0;
+}
+menu li:last-child .menu-elemento {
+  border-radius: 0 0 6px 6px;
+}
+menu a, menu button {
+  display: inline-flex;
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  margin: 0.5rem 0;
+}
+menu .menu-elemento {
+  background-color: var(--menu-item-background-color);
+  color: var(--menu-item-font-color);
+  border: none;
+  border-radius: 0;
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin: 0 -0.5rem;
+}
+menu .menu-elemento:hover {
+  background-color: var(--menu-item-background-color-hover);
+  color: var(--menu-item-font-color-hover);
+}
+menu .menu-elemento:focus {
+  outline-offset: -0.25em;
+  outline-width: 0.35em;
+  outline-color: var(--menu-item-outline-color);
+}
+menu .menu-elemento:active {
+  outline: none;
+}
+menu .menu-separador {
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-color: var(--menu-border-color);
+}
+menu.menu-horizontal {
+  display: flex;
+  padding: 0.5rem 0;
+}
+menu.menu-horizontal li:first-child .menu-elemento, menu.menu-horizontal li:last-child .menu-elemento {
+  border-radius: 6px;
+}
+menu.menu-horizontal a, menu.menu-horizontal button {
+  margin: 0;
+}
+menu.menu-horizontal .menu-elemento {
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.5rem;
+}
+menu.menu-horizontal .menu-separador {
+  border-width: 0 1px 0 0;
 }
 
 /*# sourceMappingURL=base.css.map */

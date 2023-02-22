@@ -113,6 +113,7 @@ $link: (
 );
 
 $button: (
+    'outline-color': var(--button-outline-color),
     'styles': (
         'button': (
             'base': (
@@ -121,7 +122,7 @@ $button: (
                 'color': var(--button-font-color),
                 'border-width': 1px,
                 'border-radius': 2px,
-                'padding': .5rem 2rem,
+                'padding': map.get($espaciado, 'medio') map.get($espaciado, 'sangria'),
             ),
             'hover': (
                 'background-color': var(--button-background-color-hover),
@@ -133,6 +134,27 @@ $button: (
                 'border-color': var(--line-color),
                 'color': var(--line-color-bold),
             )
+        )
+    )
+);
+
+// componente
+$menu: (
+    'espaciado-base': map.get($espaciado, 'medio'),
+    'background-color': var(--menu-background-color),
+    'color': var(--menu-font-color),
+    'border-width': 1px,
+    'border-color': var(--menu-border-color),
+    'border-radius': 6px,
+    'outline-color': var(--menu-item-outline-color),
+    'menu-item': (
+        'base': (
+            'background-color': var(--menu-item-background-color),
+            'color': var(--menu-item-font-color),
+        ),
+        'hover': (
+            'background-color': var(--menu-item-background-color-hover),
+            'color': var(--menu-item-font-color-hover),
         )
     )
 );
