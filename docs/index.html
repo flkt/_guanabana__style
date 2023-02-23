@@ -13,22 +13,27 @@
 </head>
 <body>
     <header>
-        <p>Base para construcción de sistemas de diseño</p>
-        <nav>
-            <a href="#headings">Títulos</a>
-            <a href="#paragraphs">Parrafos</a>
-            <a href="#images">Imágenes</a>
-            <a href="#details">Acordeon</a>
-            <a href="#links">Enlaces</a>
-            <a href="#buttons">Botones</a>
-            <a href="#lists">Listas</a>
-            <a href="#tables">Tablas</a>
-
-            <a href="#grid">Retícula</a>
-
-            <a href="#menu">Menú</a>
-        </nav>
+        <p class="resaltado m-y-5 p-y-5">Base para construcción de sistemas de diseño</p>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#headings">Títulos</a></li>
+            <li><a href="#paragraphs">Parrafos</a></li>
+            <li><a href="#images">Imágenes</a></li>
+            <li><a href="#details">Acordeon</a></li>
+            <li><a href="#links">Enlaces</a></li>
+            <li><a href="#buttons">Botones</a></li>
+            <li><a href="#lists">Listas</a></li>
+            <li><a href="#tables">Tablas</a></li>
+
+            <li><a href="#grid">Retícula</a></li>
+
+            <li><a href="#menu">Menú</a></li>
+            <li><a href="#nav">Navegación</a></li>
+            
+            <li><a href="https://github.com/flkt/_design_system__scss" target="_blank" class="nav-boton">github</a></li>
+        </ul>
+    </nav>
     <main>
         <section id="headings">
             <p class="titulo">Títulos</p>
@@ -215,7 +220,6 @@
                     <th>cabecera de tabla</th>
                     <th>cada uno de estos es un campo</th>
                     <th>deberia estar al menos uno en dos lineas</th>
-                    <th>para saber bien como se comporta la tabla</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -224,27 +228,24 @@
                     <td>debe se estar centrado? o quizas arriba</td>
                     <td>cual deberia de ser la mejor alineacion para leer una tabla?</td>
                     <td>bueno , pues, probemoslo</td>
-                    <td>a</td>
-                    <td>a</td>
-                    <td>a</td>
+                    <td>centrado</td>
+                    <td>esta bien</td>
                   </tr>
                   <tr>
                     <td>y luego en el cuerpo de la tabla</td>
                     <td>debe se estar centrado? o quizas arriba</td>
                     <td>cual deberia de ser la mejor alineacion para leer una tabla?</td>
                     <td>bueno , pues, probemoslo</td>
-                    <td>a</td>
-                    <td>a</td>
-                    <td>a</td>
+                    <td>centrado</td>
+                    <td>esta bien</td>
                   </tr>
                   <tr>
                     <td>y luego en el cuerpo de la tabla</td>
                     <td>debe se estar centrado? o quizas arriba</td>
                     <td>cual deberia de ser la mejor alineacion para leer una tabla?</td>
                     <td>bueno , pues, probemoslo</td>
-                    <td>a</td>
-                    <td>a</td>
-                    <td>creo que centrado esta bien</td>
+                    <td>centrado</td>
+                    <td>esta bien</td>
                   </tr>
                 </tbody>
               </table>
@@ -293,32 +294,47 @@
         <section id="menu">
             <p class="titulo">Menú</p>
             <menu>
-                <li><button class="menu-elemento" type="button">button.menu-elemento</button></li>
-                <li><a href="#menu" class="menu-elemento">a.menu-elemento</a></li>
-                <li><a href="#menu" class="menu-elemento">a.menu-elemento</a></li>
-                <li class="menu-separador"><a href="#menu" class="menu-elemento">a.menu-elemento</a></li>
-                <li><a href="#menu" class="menu-elemento">a.menu-elemento</a></li>
-                <li class="menu-separador"><a href="#menu" class="menu-elemento">a.menu-elemento</a></li>
+                <li><button class="menu-item" type="button">button.menu-item</button></li>
+                <li><a href="#menu" class="menu-item">a.menu-item</a></li>
+                <li><a href="#menu" class="menu-item">a.menu-item</a></li>
+                <li class="menu-separador"><a href="#menu" class="menu-item">a.menu-item</a></li>
+                <li><a href="#menu" class="menu-item">a.menu-item</a></li>
+                <li class="menu-separador"><a href="#menu" class="menu-item">a.menu-item</a></li>
                 <li class="menu-separador">
                     <a href="#menu">enlace</a>
                     <button type="button">boton</button>
                 </li>
-                <li><a href="#menu" class="menu-elemento">a.menu-elemento</a></li>
-                <li><a href="#menu" class="menu-elemento">a.menu-elemento</a></li>
+                <li><a href="#menu" class="menu-item">a.menu-item</a></li>
+                <li><a href="#menu" class="menu-item">a.menu-item</a></li>
             </menu>
             <p class="subtitulo">.menu-horizontal</p>
             <menu class="menu-horizontal">
-                <li><button class="menu-elemento" type="button">button.menu-elemento</button></li>
-                <li><a href="#menu" class="menu-elemento">a.menu-elemento</a></li>
-                <li><a href="#menu" class="menu-elemento">a.menu-elemento</a></li>
-                <li class="menu-separador"><a href="#menu" class="menu-elemento">a.menu-elemento</a></li>
-                <li><a href="#menu" class="menu-elemento">a.menu-elemento</a></li>
-                <li class="menu-separador"><a href="#menu" class="menu-elemento">a.menu-elemento</a></li>
+                <li><button class="menu-item" type="button">button.menu-item</button></li>
+                <li><a href="#menu" class="menu-item">a.menu-item</a></li>
+                <li><a href="#menu" class="menu-item">a.menu-item</a></li>
+                <li class="menu-separador"><a href="#menu" class="menu-item">a.menu-item</a></li>
+                <li><a href="#menu" class="menu-item">a.menu-item</a></li>
+                <li class="menu-separador"><a href="#menu" class="menu-item">a.menu-item</a></li>
                 <li>
                     <a href="#menu">enlace</a>
                     <button type="button">boton</button>
                 </li>
             </menu>
+        </section>
+        <section id="nav">
+            <p class="titulo">Navegación</p>
+            <nav>
+                <ul>
+                    <li><span class="nav-logo">loguito</span></li>
+                    <li><a href="#nav">enlace</a></li>
+                    <li><a href="#nav">enlace</a></li>
+                    <li><a href="#nav">enlace</a></li>
+                    <li><a href="#nav">enlace</a></li>
+                    <li><a href="#nav">enlace</a></li>
+                    <li><button type="button">b</button></li>
+                    <li><button type="button">usuario</button></li>
+                </ul>
+            </nav>
         </section>
     </main>
     <footer>

@@ -6,11 +6,6 @@
     margin: 0;
 }
 
-html, body {
-    height: 100%;
-    max-width: 100%;
-}
-
 html {
     scroll-behavior: smooth;
     text-rendering: optimizeLegibility;
@@ -34,7 +29,7 @@ h1, h2, h3, h4, h5, h6, a, th, td {
     hyphens: auto;
 }
 
-article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary, form, iframe {
+article, aside, details, figcaption, figure, footer, header, main, section, summary, form, iframe {
     display: block;
 }
 
