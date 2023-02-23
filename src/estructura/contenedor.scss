@@ -3,7 +3,7 @@
 
 @each $dispositivo, $contenedor in var.$container {
     @media screen and (min-width: map.get(var.$breakpoints, #{$dispositivo})) {
-        header, footer, main, article, .contenedor {
+        header, footer, main, article, nav, .contenedor {
             max-width: map.get($contenedor, 'ancho-maximo');
             padding-left: map.get($contenedor, 'margen-interior');
             padding-right: map.get($contenedor, 'margen-interior');
@@ -12,4 +12,9 @@
             max-width: map.get($contenedor, 'ancho-lectura');
         }
     }
+}
+
+header nav, footer nav, main nav, article nav, .contenedor nav {
+    padding-left: 0;   
+    padding-right: 0;   
 }

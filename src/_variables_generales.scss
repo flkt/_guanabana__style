@@ -139,6 +139,46 @@ $button: (
 );
 
 // componente
+$navegacion: (
+    'background-color': var(--nav-background-color),
+    'border-color': var(--nav-border-color),
+    'border-width': 0px,
+    'blur': 10px,
+    'box-shadow': none,
+    'box-shadow-color': var(--nav-box-shadow-color),
+    'espaciado-base': map.get($espaciado, 'identado'),
+    'nav-link': (
+        'font-size': 1rem,
+        'padding': 1rem,
+        'margin': 0,
+        'base': (
+            'background-color': var(--nav-link-background-color),
+            'color': var(--nav-link-font-color),
+        ),
+        'hover': (
+            'background-color': var(--nav-link-background-color-hover),
+            'color': var(--nav-link-font-color-hover),
+        ),
+    ),
+    'nav-button': (
+        'font-size': 1rem,
+        'border-width': 0,
+        'border-radius': 99rem,
+        'padding': .25rem .75rem,
+        'margin': .75rem .25rem,
+        'base': (
+            'background-color': var(--nav-button-background-color),
+            'border-color': var(--nav-button-background-color),
+            'color': var(--nav-button-font-color),
+        ),
+        'hover': (
+            'background-color': var(--nav-button-background-color-hover),
+            'border-color': var(--nav-button-background-color-hover),
+            'color': var(--nav-button-font-color-hover),
+        ),
+    ),
+);
+
 $menu: (
     'espaciado-base': map.get($espaciado, 'medio'),
     'background-color': var(--menu-background-color),

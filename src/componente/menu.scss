@@ -63,21 +63,29 @@ menu {
     }
 
     &.menu-horizontal {
-        display: flex;
-        padding: $espaciado 0;
+        display: inline-flex;
+        align-items: center;
+        padding: calc($espaciado*.5);
+        overflow-x: auto;
+        max-width: 100%;
+
         li:first-child .menu-item, li:last-child .menu-item {
             border-radius: map.get(var.$menu, 'border-radius');
         }
         a, button {
             margin: 0;
+            padding: calc($espaciado*.25) calc($espaciado*.5);
         }
+        
         .menu-item {
             border-radius: map.get(var.$menu, 'border-radius');
-            padding: calc($espaciado*.5) $espaciado;
-            margin: 0 $espaciado;
+            padding: $espaciado;
+            margin: 0;
         }
         .menu-separador {
             border-width: 0 map.get(var.$menu, 'border-width') 0 0;
+            margin-right: calc($espaciado*.5);
+            padding-right: calc($espaciado*.5);
         }
     }
 }
