@@ -18,10 +18,10 @@ menu {
         margin: 0;
         padding: 0;
     }
-    li:first-child .menu-elemento {
+    li:first-child .menu-item {
         border-radius: map.get(var.$menu, 'border-radius') map.get(var.$menu, 'border-radius') 0 0;
     }
-    li:last-child .menu-elemento {
+    li:last-child .menu-item {
         border-radius: 0 0 map.get(var.$menu, 'border-radius') map.get(var.$menu, 'border-radius');
     }
 
@@ -32,7 +32,7 @@ menu {
         margin: $espaciado 0;
     }
 
-    .menu-elemento {
+    .menu-item {
         background-color: map.get(var.$menu, 'menu-item', 'base', 'background-color');
         color: map.get(var.$menu, 'menu-item', 'base', 'color');
         border: none;
@@ -65,13 +65,13 @@ menu {
     &.menu-horizontal {
         display: flex;
         padding: $espaciado 0;
-        li:first-child .menu-elemento, li:last-child .menu-elemento {
+        li:first-child .menu-item, li:last-child .menu-item {
             border-radius: map.get(var.$menu, 'border-radius');
         }
         a, button {
             margin: 0;
         }
-        .menu-elemento {
+        .menu-item {
             border-radius: map.get(var.$menu, 'border-radius');
             padding: calc($espaciado*.5) $espaciado;
             margin: 0 $espaciado;
