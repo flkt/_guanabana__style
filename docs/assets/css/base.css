@@ -20,6 +20,7 @@
   --detail-font-color-hover: #4722ff;
   --link-font-color: #4722ff;
   --link-background-color: #00ffae;
+  --tag-background-color: #4722ff;
   --button-background-color: transparent;
   --button-border-color: #4722ff;
   --button-font-color: #4722ff;
@@ -468,6 +469,30 @@ button:disabled {
   background: var(--line-color);
   border-color: var(--line-color);
   color: var(--line-color-bold);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 99rem;
+  line-height: calc(1em + 0.5rem);
+  font-size: max(0.875rem, 12px);
+  padding: 0.25rem 1rem;
+  background-color: transparent;
+  box-shadow: inset 0 0 8rem -7rem var(--tag-background-color);
+  color: var(--tag-background-color);
+}
+.tag:hover {
+  background-color: var(--tag-background-color);
+  box-shadow: inset 0 0 0 0 var(--tag-background-color);
+  color: var(--main-background-color);
+}
+.tag:focus {
+  outline-offset: 0em;
+  outline-width: 0.25em;
+  outline-color: var(--button-outline-color);
 }
 
 @media screen and (min-width: 320px) {
