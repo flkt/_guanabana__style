@@ -68,13 +68,13 @@ $detail: (
 
 $table: (
     'caption': 1.125rem,
-    'th': max(.875rem, 12px)
+    'th': max(.875rem, map.get($main-font, 'minimo'))
 );
 
 $list: (
-    'nested': max(.875rem, 12px),
+    'nested': max(.875rem, map.get($main-font, 'minimo')),
     'dt': 1rem,
-    'dd': max(.875rem, 12px)
+    'dd': max(.875rem, map.get($main-font, 'minimo'))
 );
 
 $link: (
@@ -136,6 +136,12 @@ $button: (
             )
         )
     )
+);
+
+$tag: (
+    'font-size': max(.875rem, map.get($main-font, 'minimo')),
+    'padding': map.get($espaciado,'minimo') map.get($espaciado,'identado'),
+    'color-base': var(--tag-background-color),
 );
 
 // componente

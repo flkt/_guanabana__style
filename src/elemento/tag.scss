@@ -1,0 +1,30 @@
+@use 'sass:map';
+@use '../_variables_generales' as var;
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 99rem;
+    line-height: calc(1em + .5rem);
+    
+    font-size: map.get(var.$tag, 'font-size');
+    padding: map.get(var.$tag, 'padding');
+
+    background-color: transparent;
+    box-shadow: inset 0 0 8rem -7rem map.get(var.$tag,'color-base');
+    color: map.get(var.$tag,'color-base');
+
+    &:hover {
+        background-color: map.get(var.$tag,'color-base');
+        box-shadow: inset 0 0 0 0 map.get(var.$tag,'color-base');
+        color: var(--main-background-color);
+    }
+
+    &:focus {
+        outline-offset: 0em;
+        outline-width: 0.25em;
+        outline-color: map.get(var.$button, 'outline-color');
+    }
+}
