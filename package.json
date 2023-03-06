@@ -1,5 +1,5 @@
 {
-  "name": "design-system",
+  "name": "ds_scss",
   "version": "0.2.0",
   "description": "base para creacion y configuracion de sistemas de diseño a medida",
   "main": "base.scss",
@@ -19,7 +19,7 @@
     "accesibility",
     "design-system"
   ],
-  "author": "flkt.crnpio@gmail.com",
+  "author": "flkt <flkt.crnpio@gmail.com>",
   "files": [
     "base.scss",
     "src",
