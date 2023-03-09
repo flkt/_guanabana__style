@@ -1,6 +1,6 @@
 {
   "name": "guanabana_scss",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Normalizador de estilos en etiquetas de HTML con variables configurables para la creación de clases, creación de temas de color, retículas (grid) y funciones de accesibilidad. Para creacion y configuracion de sistemas de diseño a medida.",
   "main": "_guanabana.scss",
   "style": "dist/_guanabana.css",
