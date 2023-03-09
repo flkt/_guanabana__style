@@ -1,6 +1,6 @@
 {
   "name": "ds_scss",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "base para creacion y configuracion de sistemas de diseño a medida",
   "main": "base.scss",
   "scripts": {
