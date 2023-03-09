@@ -58,6 +58,10 @@ _guanabana.scss
     _guanabana.css.map
 ├── docs/  <- pa ver como se ven los estilos al final
     index.html
+    └── assets/
+        └── css/
+            _guanabana.css
+            _guanabana.css.map
 └── src/
     _base.scss  <-  estilos generales o que comparten varias etiquetas
     _variables_accesibilidad.scss  <-  variables de css que se necesitan editar al vuelo para crear las herramientas de accesibilidad
