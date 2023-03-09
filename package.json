@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "concurrently \"npm run dev-sass\" \"npm run dev-localhost\" ",
     "dev-localhost": "node index",
-    "dev-sass": "sass --watch _guanabana.scss:docs/assets/css/_guanabana.css --style expanded",
+    "dev-sass": "sass --watch _guanabana.scss:docs/assets/css/guanabana.css --style expanded",
     "build": "sass _guanabana.scss:dist/_guanabana.css --style expanded",
     "build-compress": "sass _guanabana.scss:dist/_guanabana.min.css --style compressed"
   },
