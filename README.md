@@ -1,14 +1,20 @@
-# _design_system__scss
+# _guanabana__scss
 
-Biblioteca editable de estilos base para crear sistemas de diseño. 
+Normalizador de estilos en etiquetas de HTML con variables configurables para la creación de clases, creación de temas de color, retículas (grid) y funciones de accesibilidad. 
+Para creacion y configuracion de sistemas de diseño a medida.
 
-*Este proyecto fue construido con [node](https://nodejs.org/en/) 18.13.0 y [sass](https://sass-lang.com/dart-sass) 1.57.1*
+
+*Este proyecto fue construido con [sass](https://sass-lang.com/dart-sass) 1.57.1*
+
+*El entorno de desarrollo se levanta con [node](https://nodejs.org/en/) 18.13.0*
+
+
 
 
 ## ambiente local
 Clona el repositorio
 ```ssh
-git clone git@github.com:flkt/_design_system__scss.git
+git clone git@github.com:flkt/_guanabana__scss.git
 ```
 
 Instala las dependencias
@@ -22,6 +28,61 @@ npm run dev
 ```
 
 Abre cualquier navegador con la ruta `http://localhost:3000/`
+
+
+
+
+## para compilar los archivos de distribución
+
+Genera el archivo sin comprimir
+```ssh
+npm run build
+```
+
+ó el archivo minificado con
+
+```ssh
+npm run build-compress
+```
+
+
+
+
+## estructura
+
+```text
+index.js   <- solo pa levantar el entorno local
+_guanabana.scss  
+├── dist/
+    _guanabana.css
+    _guanabana.css.map
+├── docs/  <- pa ver como se ven los estilos al final
+    index.html
+└── src/
+    _base.scss  <-  estilos generales o que comparten varias etiquetas
+    _variables_accesibilidad.scss  <-  variables de css que se necesitan editar al vuelo para crear las herramientas de accesibilidad
+    _variables_color.scss  <-  variables de color de cualquier etiqueta, clase, spseudo clase
+    _variables_generales.scss  <-  variables para homologar, crear arreglos de clases y un monton de cosas mas. (quizas deberia dividirla.. jeje)
+    ├── elemento/
+        acordeon.scss
+        boton.scss
+        enlace.scss
+        etiqueta.scss
+        imagen.scss
+        lista.scss
+        menu.scss
+        navegacion.scss
+        tabla.scss
+        texto.scss
+        titulo.scss
+    ├── estructura/
+        contenedor.scss
+        margen.scss
+        reticula.scss
+    └── formulario/
+        TODO.md
+```
+
 
 
 ## notas

@@ -12,11 +12,10 @@
 @use 'src/elemento/tabla';
 @use 'src/elemento/enlace';
 @use 'src/elemento/boton';
-@use 'src/elemento/tag';
+@use 'src/elemento/etiqueta';
+@use 'src/elemento/navegacion';
+@use 'src/elemento/menu';
 
 @use 'src/estructura/contenedor';
 @use 'src/estructura/reticula';
 @use 'src/estructura/margen';
-
-@use 'src/componente/navegacion';
-@use 'src/componente/menu';

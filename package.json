@@ -1,14 +1,15 @@
 {
-  "name": "ds_scss",
+  "name": "guanabana_scss",
   "version": "0.3.2",
-  "description": "base para creacion y configuracion de sistemas de diseño a medida",
-  "main": "base.scss",
+  "description": "Normalizador de estilos en etiquetas de HTML con variables configurables para la creación de clases, creación de temas de color, retículas (grid) y funciones de accesibilidad. Para creacion y configuracion de sistemas de diseño a medida.",
+  "main": "_guanabana.scss",
+  "style": "dist/_guanabana.css",
   "scripts": {
     "dev": "concurrently \"npm run dev-sass\" \"npm run dev-localhost\" ",
     "dev-localhost": "node index",
-    "dev-sass": "sass --watch base.scss:docs/assets/css/base.css --style expanded",
-    "build": "sass base.scss:dist/ds_scss.css --style expanded",
-    "build-compress": "sass base.scss:dist/ds_scss.min.css --style compressed"
+    "dev-sass": "sass --watch _guanabana.scss:docs/assets/css/_guanabana.css --style expanded",
+    "build": "sass _guanabana.scss:dist/_guanabana.css --style expanded",
+    "build-compress": "sass _guanabana.scss:dist/_guanabana.min.css --style compressed"
   },
   "repository": {
     "type": "git",
@@ -21,10 +22,15 @@
     "accesibility",
     "design-system"
   ],
-  "author": "flkt <flkt.crnpio@gmail.com>",
+  "author": {
+    "name": "flkt",
+    "email": "flkt.crnpio@gmail.com",
+    "url": "https://flkt.mx/"
+  },
   "files": [
-    "base.scss",
+    "_guanabana.scss",
     "src",
+    "dist",
     "README.md"
   ],
   "bugs": {

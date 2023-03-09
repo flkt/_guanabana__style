@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/_guanabana.css">
     <link rel="stylesheet" href="https://file.myfontastic.com/rD8bJfMb22HcoLdhJYvaPB/icons.css">
     <title>Base Sistema de Diseño</title>
     <style>
@@ -25,12 +25,11 @@
             <li><a href="#buttons">Botones</a></li>
             <li><a href="#lists">Listas</a></li>
             <li><a href="#tables">Tablas</a></li>
-            <li><a href="#tags">Tags</a></li>
-
-            <li><a href="#grid">Retícula</a></li>
-
+            <li><a href="#tags">Etiquetas</a></li>
             <li><a href="#menu">Menú</a></li>
             <li><a href="#nav">Navegación</a></li>
+
+            <li><a href="#grid">Retícula</a></li>
             
             <li><a href="https://github.com/flkt/_design_system__scss" target="_blank" class="nav-boton">github</a></li>
         </ul>
@@ -252,11 +251,56 @@
               </table>
         </section>
         <section id="tags">
-            <p class="titulo">Tags</p>
+            <p class="titulo">Etiquetas</p>
             <p>
-                <button type="button" class="tag">tag btn</button>
+                <button type="button" class="etiqueta">boton.etiqueta</button>
             </p>
         </section>
+        <section id="menu">
+          <p class="titulo">Menú</p>
+          <menu>
+              <li><button class="menu-item" type="button">button.menu-item</button></li>
+              <li><a href="#menu" class="menu-item">a.menu-item</a></li>
+              <li><a href="#menu" class="menu-item">a.menu-item</a></li>
+              <li class="menu-separador"><a href="#menu" class="menu-item">a.menu-item</a></li>
+              <li><a href="#menu" class="menu-item">a.menu-item</a></li>
+              <li class="menu-separador"><a href="#menu" class="menu-item">a.menu-item</a></li>
+              <li class="menu-separador">
+                  <a href="#menu">enlace</a>
+                  <button type="button">boton</button>
+              </li>
+              <li><a href="#menu" class="menu-item">a.menu-item</a></li>
+              <li><a href="#menu" class="menu-item">a.menu-item</a></li>
+          </menu>
+          <p class="subtitulo">.menu-horizontal</p>
+          <menu class="menu-horizontal">
+              <li><button class="menu-item" type="button">button.menu-item</button></li>
+              <li><a href="#menu" class="menu-item">a.menu-item</a></li>
+              <li><a href="#menu" class="menu-item">a.menu-item</a></li>
+              <li class="menu-separador"><a href="#menu" class="menu-item">a.menu-item</a></li>
+              <li><a href="#menu" class="menu-item">a.menu-item</a></li>
+              <li class="menu-separador"><a href="#menu" class="menu-item">a.menu-item</a></li>
+              <li>
+                  <a href="#menu">enlace</a>
+                  <button type="button">boton</button>
+              </li>
+          </menu>
+      </section>
+      <section id="nav">
+          <p class="titulo">Navegación</p>
+          <nav>
+              <ul>
+                  <li><span class="nav-logo">loguito</span></li>
+                  <li><a href="#nav">enlace</a></li>
+                  <li><a href="#nav">enlace</a></li>
+                  <li><a href="#nav">enlace</a></li>
+                  <li><a href="#nav">enlace</a></li>
+                  <li><a href="#nav">enlace</a></li>
+                  <li><button type="button">b</button></li>
+                  <li><button type="button">usuario</button></li>
+              </ul>
+          </nav>
+      </section>
         <section id="grid">
             <p class="titulo">Reticula</p>
             <p class="subtitulo">grid</p>
@@ -297,51 +341,6 @@
             <div class="grid">
                 <div class="c-7 p-3 m-y-1">c-7</div>
             </div>
-        </section>
-        <section id="menu">
-            <p class="titulo">Menú</p>
-            <menu>
-                <li><button class="menu-item" type="button">button.menu-item</button></li>
-                <li><a href="#menu" class="menu-item">a.menu-item</a></li>
-                <li><a href="#menu" class="menu-item">a.menu-item</a></li>
-                <li class="menu-separador"><a href="#menu" class="menu-item">a.menu-item</a></li>
-                <li><a href="#menu" class="menu-item">a.menu-item</a></li>
-                <li class="menu-separador"><a href="#menu" class="menu-item">a.menu-item</a></li>
-                <li class="menu-separador">
-                    <a href="#menu">enlace</a>
-                    <button type="button">boton</button>
-                </li>
-                <li><a href="#menu" class="menu-item">a.menu-item</a></li>
-                <li><a href="#menu" class="menu-item">a.menu-item</a></li>
-            </menu>
-            <p class="subtitulo">.menu-horizontal</p>
-            <menu class="menu-horizontal">
-                <li><button class="menu-item" type="button">button.menu-item</button></li>
-                <li><a href="#menu" class="menu-item">a.menu-item</a></li>
-                <li><a href="#menu" class="menu-item">a.menu-item</a></li>
-                <li class="menu-separador"><a href="#menu" class="menu-item">a.menu-item</a></li>
-                <li><a href="#menu" class="menu-item">a.menu-item</a></li>
-                <li class="menu-separador"><a href="#menu" class="menu-item">a.menu-item</a></li>
-                <li>
-                    <a href="#menu">enlace</a>
-                    <button type="button">boton</button>
-                </li>
-            </menu>
-        </section>
-        <section id="nav">
-            <p class="titulo">Navegación</p>
-            <nav>
-                <ul>
-                    <li><span class="nav-logo">loguito</span></li>
-                    <li><a href="#nav">enlace</a></li>
-                    <li><a href="#nav">enlace</a></li>
-                    <li><a href="#nav">enlace</a></li>
-                    <li><a href="#nav">enlace</a></li>
-                    <li><a href="#nav">enlace</a></li>
-                    <li><button type="button">b</button></li>
-                    <li><button type="button">usuario</button></li>
-                </ul>
-            </nav>
         </section>
     </main>
     <footer>
