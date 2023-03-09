@@ -1,12 +1,7 @@
-# _guanabana__scss
+# _guanabana__style
 
 Normalizador de estilos en etiquetas de HTML con variables configurables para la creación de clases, creación de temas de color, retículas (grid) y funciones de accesibilidad. 
 Para creacion y configuracion de sistemas de diseño a medida.
-
-
-*Este proyecto fue construido con [sass](https://sass-lang.com/dart-sass) 1.57.1*
-
-*El entorno de desarrollo se levanta con [node](https://nodejs.org/en/) 18.13.0*
 
 
 
@@ -52,16 +47,16 @@ npm run build-compress
 
 ```text
 index.js   <- solo pa levantar el entorno local
-_guanabana.scss  
+guanabana-style.scss  
 ├── dist/
-    _guanabana.css
-    _guanabana.css.map
+    guanabana-style.css
+    guanabana-style.css.map
 ├── docs/  <- pa ver como se ven los estilos al final
     index.html
     └── assets/
         └── css/
-            _guanabana.css
-            _guanabana.css.map
+            guanabana-style.css
+            guanabana-style.css.map
 └── src/
     _base.scss  <-  estilos generales o que comparten varias etiquetas
     _variables_accesibilidad.scss  <-  variables de css que se necesitan editar al vuelo para crear las herramientas de accesibilidad
@@ -97,3 +92,10 @@ La única variable que se debería tener que editar para ajustar el tamaño debe
 Para lograrlo, se necesitan utilizar todas las demás variables de tamaño de tipografía en `rem` para elementos en bloque y `em` para elementos en linea; esto para que cuando cambie la variable de tipogragía base, por el menú accesibilidad, las tipografías de todos los elementos se reajusten y no tener que sobreescribir todas las demás.
 
 Se resetearon a `1rem` todos los heading, para evitar el uso de la etiqueta como estilo en lugar de semántica. Peeeeeero en caso de que seas bien chingona y prefieras utilizar las etiquetas ya con los estilos finales finalazos, puedes agregar los tamaños para cada etiqueta en el archivo `_variables_generales.scss` en el arreglo de la variable `$heading-font` agregando cada etiqueta, ej. `h1` en el sub-arreglo de `elements`.
+
+
+
+
+__
+
+*Este proyecto fue construido con [sass](https://sass-lang.com/dart-sass) 1.57.1 || levantado con [node](https://nodejs.org/en/) 18.13.0 y [express](https://expressjs.com/) 4.18.2*

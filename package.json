@@ -1,20 +1,22 @@
 {
-  "name": "guanabana_scss",
+  "name": "guanabana-style",
   "version": "0.3.5",
   "description": "Normalizador de estilos en etiquetas de HTML con variables configurables para la creación de clases, creación de temas de color, retículas (grid) y funciones de accesibilidad. Para creacion y configuracion de sistemas de diseño a medida.",
-  "main": "_guanabana.scss",
-  "style": "dist/_guanabana.css",
+  "main": "guanabana-style.scss",
+  "style": "dist/guanabana-style.css",
   "scripts": {
     "dev": "concurrently \"npm run dev-sass\" \"npm run dev-localhost\" ",
     "dev-localhost": "node index",
-    "dev-sass": "sass --watch _guanabana.scss:docs/assets/css/guanabana.css --style expanded",
-    "build": "sass _guanabana.scss:dist/_guanabana.css --style expanded",
-    "build-compress": "sass _guanabana.scss:dist/_guanabana.min.css --style compressed"
+    "dev-sass": "sass --watch guanabana-style.scss:docs/assets/css/guanabana-style.css --style expanded",
+    "build": "sass guanabana-style.scss:dist/guanabana-style.css --style expanded",
+    "build-compress": "sass guanabana-style.scss:dist/guanabana-style.min.css --style compressed"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/flkt/_design_system.git"
-  },
+  "files": [
+    "guanabana-style.scss",
+    "src",
+    "dist",
+    "README.md"
+  ],
   "keywords": [
     "css",
     "sass",
@@ -27,16 +29,10 @@
     "email": "flkt.crnpio@gmail.com",
     "url": "https://flkt.mx/"
   },
-  "files": [
-    "_guanabana.scss",
-    "src",
-    "dist",
-    "README.md"
-  ],
-  "bugs": {
-    "url": "https://github.com/flkt/_design_system/issues"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flkt/_guanabana__style.git"
   },
-  "homepage": "https://github.com/flkt/_design_system#readme",
   "dependencies": {
     "sass": "^1.57.1"
   },
