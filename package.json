@@ -4,9 +4,11 @@
   "description": "base para creacion y configuracion de sistemas de diseño a medida",
   "main": "base.scss",
   "scripts": {
-    "dev": "concurrently \"npm run dev-estilos\" \"npm run dev-localhost\" ",
+    "dev": "concurrently \"npm run dev-sass\" \"npm run dev-localhost\" ",
     "dev-localhost": "node index",
-    "dev-estilos": "sass --watch base.scss:docs/assets/css/base.css --style expanded"
+    "dev-sass": "sass --watch base.scss:docs/assets/css/base.css --style expanded",
+    "build": "sass base.scss:dist/ds_scss.css --style expanded",
+    "build-compress": "sass base.scss:dist/ds_scss.min.css --style compressed"
   },
   "repository": {
     "type": "git",
