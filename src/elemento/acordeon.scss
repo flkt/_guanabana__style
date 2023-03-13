@@ -1,48 +1,54 @@
 @use 'sass:map';
-@use '../../config/variables_generales.scss' as var;
-
-$icono: 1rem;
 
 details {
-    border-width: 1px 0;
-    border-style: solid;
-    border-color: var(--line-color);
-    padding: 0 map.get(var.$espaciado, 'identado');
-    transition: all .27s ease-in-out;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: var(--line-color);
+  padding: 0 map.get($espaciado, 'identado');
+  transition: all .27s ease-in-out;
+
+  summary {
+    color: var(--detail-font-color);
+    font-size: map.get($detail, 'summary');
+    margin: map.get($espaciado, 'identado') 0;
+    padding-right: calc(map.get($detail, 'icono', 'size') * 2);
+    position: relative;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: map.get($detail, 'icono', 'code');
+      font-family: map.get($detail, 'icono', 'font');
+      right: 0;
+      top: 0;
+      width: map.get($detail, 'icono', 'size');
+      position: absolute;
+      transition: all .27s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--detail-font-color-hover);
+    }
+
+    &:focus {
+      outline-offset: 1rem;
+    }
+  }
+
+  &[open] {
     summary {
-        color: var(--detail-font-color);
-        font-size: map.get(var.$detail, 'summary');
-        margin: map.get(var.$espaciado, 'identado') 0;
-        padding-right: calc($icono * 2);
-        position: relative;
-        &::-webkit-details-marker {
-            display:none;
-        }
-        &::after {
-            content: "\61";
-            font-family: "flkt-font";
-            right: 0;
-            top: 0;
-            width: $icono;
-            position: absolute;
-            transition: all .27s ease-in-out;
-        }
-        &:hover, &:focus {
-            color: var(--detail-font-color-hover);
-        }
-        &:focus {
-            outline-offset: 1rem;
-        }
+      outline-color: transparent;
+
+      &::after {
+        transform: rotate(180deg);
+      }
     }
-    &[open] {
-        summary {
-            outline-color: transparent;
-            &::after {
-                transform: rotate(180deg);
-            }
-        }
-    }
+  }
 }
-details + details {
-    border-top: none;
+
+details+details {
+  border-top: none;
 }

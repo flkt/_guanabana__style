@@ -1,32 +1,37 @@
 @use 'sass:map';
-@use '../../config/variables_generales.scss' as var;
 
-ol, ul {
-    margin-top: map.get(var.$espaciado, 'identado');
-    margin-bottom: map.get(var.$espaciado, 'identado');
-    padding-left: map.get(var.$espaciado, 'sangria');
-    padding-right: map.get(var.$espaciado, 'identado');
-    list-style-position: outside;
-    ol, ul {
-        margin: 0;
-        font-size: map.get(var.$list, 'nested');
-    }
+ol,
+ul {
+  margin-top: map.get($espaciado, 'identado');
+  margin-bottom: map.get($espaciado, 'identado');
+  padding-left: map.get($espaciado, 'sangria');
+  padding-right: map.get($espaciado, 'identado');
+  list-style-position: outside;
+
+  ol,
+  ul {
+    margin: 0;
+    font-size: map.get($list, 'nested');
+  }
 }
+
 ol ol {
-    li::marker {
-        content: counters(list-item,'.') '  ';
-    }
+  li::marker {
+    content: counters(list-item, '.') '  ';
+  }
 }
 
 dl {
-    margin-top: map.get(var.$espaciado, 'identado');
-    margin-bottom: map.get(var.$espaciado, 'identado');
-    padding-left: map.get(var.$espaciado, 'identado');
-    padding-right: map.get(var.$espaciado, 'identado');
-    dt {
-        font-size: map.get(var.$list, 'dt');
-    }
-    dd {
-        font-size: map.get(var.$list, 'dd');
-    }
+  margin-top: map.get($espaciado, 'identado');
+  margin-bottom: map.get($espaciado, 'identado');
+  padding-left: map.get($espaciado, 'identado');
+  padding-right: map.get($espaciado, 'identado');
+
+  dt {
+    font-size: map.get($list, 'dt');
+  }
+
+  dd {
+    font-size: map.get($list, 'dd');
+  }
 }

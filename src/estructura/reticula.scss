@@ -1,30 +1,35 @@
 @use 'sass:map';
-@use '../../config/variables_generales.scss' as var;
 
 .grid {
-    display: grid;
+  display: grid;
 }
 
-@each $dispositivo, $configuracion in var.$reticula {
-    @media screen and (min-width: map.get(var.$breakpoints, #{$dispositivo})) {
-        .grid {
-            column-gap: map.get($configuracion, 'column-gap');
-            grid-template-columns: repeat(map.get($configuracion, 'grid-template-columns'), 1fr);
-        }
-        @each $nombre, $valor in map.get($configuracion, 'grid-equivalencias') {
-            #{$nombre} {
-                grid-column: span $valor;
-            }
-        }
+@each $dispositivo,
+$configuracion in map.get($reticula, 'adaptable') {
+  @media screen and (min-width: map.get($breakpoints, #{$dispositivo})) {
+    .grid {
+      column-gap: map.get($configuracion, 'column-gap');
+      grid-template-columns: repeat(map.get($configuracion, 'grid-template-columns'), 1fr);
     }
+
+    @each $nombre,
+    $valor in map.get($configuracion, 'grid-equivalencias') {
+      #{$nombre} {
+        grid-column: span $valor;
+      }
+    }
+  }
 }
 
-@each $dispositivo, $configuracion in var.$reticula {
-    @media screen and (min-width: map.get(var.$breakpoints, #{$dispositivo})) {
-        @each $nombre, $valor in map.get($configuracion, 'grid-equivalencias') {
-            #{$nombre}-#{$dispositivo} {
-                grid-column: span $valor;
-            }
-        }
+@each $dispositivo,
+$configuracion in map.get($reticula, 'adaptable') {
+  @media screen and (min-width: map.get($breakpoints, #{$dispositivo})) {
+
+    @each $nombre,
+    $valor in map.get($configuracion, 'grid-equivalencias') {
+      #{$nombre}-#{$dispositivo} {
+        grid-column: span $valor;
+      }
     }
+  }
 }

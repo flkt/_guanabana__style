@@ -1,28 +1,30 @@
 @use 'sass:map';
-@use '../../config/variables_generales.scss' as var;
 
 figure {
+  display: block;
+  clear: both;
+  margin-top: map.get($espaciado, 'identado');
+  margin-bottom: map.get($espaciado, 'identado');
+
+  img {
+    float: left;
+    max-width: 100%;
+  }
+
+  figcaption {
+    font-size: clamp(map.get($main-font, 'minimo'), .75rem, map.get($main-font, 'maximo'));
+    line-height: calc(1em + .25rem);
     display: block;
     clear: both;
-    margin-top: map.get(var.$espaciado, 'identado');
-    margin-bottom: map.get(var.$espaciado, 'identado');
-    img {
-        float: left;
-        max-width: 100%;
-    }
-    figcaption {
-        font-size: clamp(map.get(var.$main-font, 'minimo'), .75rem, map.get(var.$main-font, 'maximo'));
-        line-height: calc(1em + .25rem);
-        display: block;
-        clear: both;
-        margin: 0;
-        padding: map.get(var.$espaciado, 'minimo') map.get(var.$espaciado, 'identado') 0;
-    }
+    margin: 0;
+    padding: map.get($espaciado, 'minimo') map.get($espaciado, 'identado') 0;
+  }
 }
 
 picture {
-    display: inline-block;
-    img {
-        max-width: 100%;
-    }
+  display: inline-block;
+
+  img {
+    max-width: 100%;
+  }
 }

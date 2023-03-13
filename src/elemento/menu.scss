@@ -1,91 +1,98 @@
 @use 'sass:map';
-@use '../../config/variables_generales.scss' as var;
-
-$espaciado: map.get(var.$menu, 'espaciado-base');
 
 menu {
-    display: inline-block;
-    list-style: none;
+  display: inline-block;
+  list-style: none;
+  border-style: solid;
+  background-color: map.get($menu, 'background-color');
+  border-width: map.get($menu, 'border-width');
+  border-color: map.get($menu, 'border-color');
+  border-radius: map.get($menu, 'border-radius');
+  color: map.get($menu, 'color');
+  padding: 0 map.get($menu, 'espaciado-base');
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  li:first-child .menu-item {
+    border-radius: map.get($menu, 'border-radius') map.get($menu, 'border-radius') 0 0;
+  }
+
+  li:last-child .menu-item {
+    border-radius: 0 0 map.get($menu, 'border-radius') map.get($menu, 'border-radius');
+  }
+
+  a,
+  button {
+    display: inline-flex;
+    border-radius: map.get($menu, 'border-radius');
+    padding: calc(map.get($menu, 'espaciado-base')*.5) map.get($menu, 'espaciado-base');
+    margin: map.get($menu, 'espaciado-base') 0;
+  }
+
+  .menu-item {
+    background-color: map.get($menu, 'menu-item', 'base', 'background-color');
+    color: map.get($menu, 'menu-item', 'base', 'color');
+    border: none;
+    border-radius: 0;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    padding: map.get($menu, 'espaciado-base') calc(map.get($menu, 'espaciado-base') * 2);
+    margin: 0 calc(map.get($menu, 'espaciado-base') * -1);
+
+    &:hover {
+      background-color: map.get($menu, 'menu-item', 'hover', 'background-color');
+      color: map.get($menu, 'menu-item', 'hover', 'color');
+    }
+
+    &:focus {
+      outline-offset: -0.25em;
+      outline-width: 0.35em;
+      outline-color: map.get($menu, 'outline-color');
+    }
+
+    &:active {
+      outline: none;
+    }
+  }
+
+  .menu-separador {
     border-style: solid;
-    background-color: map.get(var.$menu, 'background-color');
-    border-width: map.get(var.$menu, 'border-width');
-    border-color: map.get(var.$menu, 'border-color');
-    border-radius: map.get(var.$menu, 'border-radius');
-    color: map.get(var.$menu, 'color');
-    padding: 0 $espaciado;
+    border-width: 0 0 map.get($menu, 'border-width') 0;
+    border-color: map.get($menu, 'border-color');
+  }
 
-    li {
-        margin: 0;
-        padding: 0;
-    }
-    li:first-child .menu-item {
-        border-radius: map.get(var.$menu, 'border-radius') map.get(var.$menu, 'border-radius') 0 0;
-    }
+  &.menu-horizontal {
+    display: inline-flex;
+    align-items: center;
+    padding: calc(map.get($menu, 'espaciado-base')*.5);
+    overflow-x: auto;
+    max-width: 100%;
+
+    li:first-child .menu-item,
     li:last-child .menu-item {
-        border-radius: 0 0 map.get(var.$menu, 'border-radius') map.get(var.$menu, 'border-radius');
+      border-radius: map.get($menu, 'border-radius');
     }
 
-    a, button {
-        display: inline-flex;
-        border-radius: map.get(var.$menu, 'border-radius');
-        padding: calc($espaciado*.5) $espaciado;
-        margin: $espaciado 0;
+    a,
+    button {
+      margin: 0;
+      padding: calc(map.get($menu, 'espaciado-base')*.25) calc(map.get($menu, 'espaciado-base')*.5);
     }
 
     .menu-item {
-        background-color: map.get(var.$menu, 'menu-item', 'base', 'background-color');
-        color: map.get(var.$menu, 'menu-item', 'base', 'color');
-        border: none;
-        border-radius: 0;
-        display: block;
-        text-align: left;
-        text-decoration: none;
-        padding: $espaciado calc($espaciado * 2);
-        margin: 0 calc($espaciado * -1);
-        &:hover {
-            background-color: map.get(var.$menu, 'menu-item', 'hover', 'background-color');
-            color: map.get(var.$menu, 'menu-item', 'hover', 'color');
-        }
-        &:focus {
-            outline-offset: -0.25em;
-            outline-width: 0.35em;
-            outline-color: map.get(var.$menu, 'outline-color');
-        }
-        &:active {
-            outline: none;
-        }
+      border-radius: map.get($menu, 'border-radius');
+      padding: map.get($menu, 'espaciado-base');
+      margin: 0;
     }
 
     .menu-separador {
-        border-style: solid;
-        border-width: 0 0 map.get(var.$menu, 'border-width') 0;
-        border-color: map.get(var.$menu, 'border-color');
+      border-width: 0 map.get($menu, 'border-width') 0 0;
+      margin-right: calc(map.get($menu, 'espaciado-base')*.5);
+      padding-right: calc(map.get($menu, 'espaciado-base')*.5);
     }
-
-    &.menu-horizontal {
-        display: inline-flex;
-        align-items: center;
-        padding: calc($espaciado*.5);
-        overflow-x: auto;
-        max-width: 100%;
-
-        li:first-child .menu-item, li:last-child .menu-item {
-            border-radius: map.get(var.$menu, 'border-radius');
-        }
-        a, button {
-            margin: 0;
-            padding: calc($espaciado*.25) calc($espaciado*.5);
-        }
-        
-        .menu-item {
-            border-radius: map.get(var.$menu, 'border-radius');
-            padding: $espaciado;
-            margin: 0;
-        }
-        .menu-separador {
-            border-width: 0 map.get(var.$menu, 'border-width') 0 0;
-            margin-right: calc($espaciado*.5);
-            padding-right: calc($espaciado*.5);
-        }
-    }
+  }
 }

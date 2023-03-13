@@ -1,0 +1,204 @@
+@use "sass:map";
+// variables de SASS que deben compilarse
+
+// para homologar los estilos de espacio y tamaño
+
+// variable con la tipografia base de accesibilidad --main-font-size
+// utilizarlo para margenes en elementos de texto
+$espaciado: (
+  'minimo': 0.25rem,
+  'medio': 0.5rem,
+  'identado': 1rem,
+  'sangria': 2rem
+);
+
+$main-font: (
+  'family': sans-serif,
+  'weight': 400,
+  'style': normal,
+  'minimo': 12px,
+  'maximo': 48px
+);
+
+$paragraph-font: (
+  'blockquote': 1.15rem,
+  'elements': (
+    '.resaltado': (
+      'font-size': 1.5rem,
+      'margin-top': 1rem,
+      'margin-bottom': 1rem,
+    ),
+    '.nota': (
+      'font-size': .75rem,
+    )
+  )
+);
+
+$heading-font: (
+  'family': sans-serif,
+  'weight': 500,
+  'style': normal,
+  'elements': (
+    '.titulo': (
+      'margin-top': 3rem,
+      'font-size': 3rem,
+      'line-height': 1em,
+    ),
+    '.subtitulo': (
+      'font-size': 2rem,
+      'line-height': 1em,
+    )
+  )
+);
+
+$code-font: (
+    'family': monospace,
+    'weight': 400,
+    'size': 1em,
+    'style': normal
+);
+
+$list: (
+  'nested': max(.875rem, map.get($main-font, 'minimo')),
+  'dt': 1rem,
+  'dd': max(.875rem, map.get($main-font, 'minimo'))
+);
+
+$table: (
+  'caption': 1.125rem,
+  'th': max(.875rem, map.get($main-font, 'minimo'))
+);
+
+$detail: (
+  'summary': 1.15rem,
+  'icono': (
+    'size': 1rem,
+    'code': '\61',
+    'font': 'flkt-font'
+  )
+);
+
+// interactivos
+$link: (
+  'styles': (
+    'a': (
+      'base': (
+        'color': var(--main-font-color),
+        'text-decoration-color': var(--link-background-color),
+        'text-decoration-skip-ink': none,
+        'text-decoration-thickness': 0.5em,
+        'text-underline-offset': -0.15em,
+      ),
+      'hover': (
+        'color': var(--main-font-color),
+        'text-decoration-thickness': 0.95em,
+        'text-underline-offset': -0.95em
+        )
+    ),
+    '.link-discreto': (
+      'base': (
+        'color': var(--link-font-color),
+        'text-decoration-skip-ink': auto,
+        'text-decoration-color': transparent,
+        'text-decoration-thickness': 0.05em,
+        'text-underline-offset': -0.15em,
+      ),
+      'hover': (
+        'color': var(--link-font-color),
+        'text-decoration-color': var(--link-font-color),
+        'text-decoration-skip-ink': auto,
+        'text-decoration-thickness': 0.15em,
+        'text-underline-offset': 0.15em,
+      )
+    ),
+  ),
+);
+
+$button: (
+  'outline-color': var(--button-outline-color),
+  'styles': (
+    'button': (
+      'base': (
+        'background-color': var(--button-background-color),
+        'border-color': var(--button-border-color),
+        'color': var(--button-font-color),
+        'border-width': 1px,
+        'border-radius': 2px,
+        'padding': map.get($espaciado, 'medio') map.get($espaciado, 'sangria'),
+      ),
+      'hover': (
+        'background-color': var(--button-background-color-hover),
+        'border-color': var(--button-border-color-hover),
+        'color': var(--button-font-color-hover),
+      ),
+      'disabled': (
+        'background': var(--line-color),
+        'border-color': var(--line-color),
+        'color': var(--line-color-bold),
+      )
+    )
+  )
+);
+
+$tag: (
+  'font-size': max(.875rem, map.get($main-font, 'minimo')),
+  'padding': map.get($espaciado, 'minimo') map.get($espaciado, 'identado'),
+  'color-base': var(--tag-background-color),
+);
+
+// componentes
+$menu: (
+  'espaciado-base': map.get($espaciado, 'medio'),
+  'background-color': var(--menu-background-color),
+  'color': var(--menu-font-color),
+  'border-width': 1px,
+  'border-color': var(--menu-border-color),
+  'border-radius': 6px,
+  'outline-color': var(--menu-item-outline-color),
+  'menu-item': ('base': ('background-color': var(--menu-item-background-color),
+      'color': var(--menu-item-font-color),
+    ),
+    'hover': ('background-color': var(--menu-item-background-color-hover),
+      'color': var(--menu-item-font-color-hover),
+    )
+  )
+);
+
+$nav: (
+  'background-color': var(--nav-background-color),
+  'border-color': var(--nav-border-color),
+  'border-width': 0px,
+  'blur': 10px,
+  'box-shadow': none,
+  'box-shadow-color': var(--nav-box-shadow-color),
+  'espaciado-base': map.get($espaciado, 'identado'),
+  'nav-link': ('font-size': 1rem,
+    'padding': 1rem,
+    'margin': 0,
+    'base': (
+      'background-color': var(--nav-link-background-color),
+      'color': var(--nav-link-font-color),
+    ),
+    'hover': (
+      'background-color': var(--nav-link-background-color-hover),
+      'color': var(--nav-link-font-color-hover),
+    ),
+  ),
+  'nav-button': (
+    'font-size': 1rem,
+    'border-width': 0,
+    'border-radius': 99rem,
+    'padding': .25rem .75rem,
+    'margin': .75rem .25rem,
+    'base': (
+      'background-color': var(--nav-button-background-color),
+      'border-color': var(--nav-button-background-color),
+      'color': var(--nav-button-font-color),
+    ),
+    'hover': (
+      'background-color': var(--nav-button-background-color-hover),
+      'border-color': var(--nav-button-background-color-hover),
+      'color': var(--nav-button-font-color-hover),
+    ),
+  ),
+);

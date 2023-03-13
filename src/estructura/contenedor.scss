@@ -1,20 +1,32 @@
 @use 'sass:map';
-@use '../../config/variables_generales.scss' as var;
 
-@each $dispositivo, $contenedor in var.$container {
-    @media screen and (min-width: map.get(var.$breakpoints, #{$dispositivo})) {
-        header, footer, main, article, nav, .contenedor {
-            max-width: map.get($contenedor, 'ancho-maximo');
-            padding-left: map.get($contenedor, 'margen-interior');
-            padding-right: map.get($contenedor, 'margen-interior');
-        }
-        .contenedor-lectura {
-            max-width: map.get($contenedor, 'ancho-lectura');
-        }
+@each $dispositivo,
+$contenedor in map.get($container, 'adaptable') {
+  @media screen and (min-width: map.get($breakpoints, #{$dispositivo})) {
+
+    header,
+    footer,
+    main,
+    article,
+    nav,
+    .contenedor {
+      max-width: map.get($contenedor, 'ancho-maximo');
+      padding-left: map.get($contenedor, 'margen-interior');
+      padding-right: map.get($contenedor, 'margen-interior');
     }
+
+    .contenedor-lectura {
+      max-width: map.get($contenedor, 'ancho-lectura');
+    }
+  }
 }
 
-header nav, footer nav, main nav, article nav, .contenedor nav {
-    padding-left: 0;   
-    padding-right: 0;   
+// TODO: volver a revisar lo de nav
+header nav,
+footer nav,
+main nav,
+article nav,
+.contenedor nav {
+  padding-left: 0;
+  padding-right: 0;
 }

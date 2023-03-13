@@ -1,23 +1,14 @@
 @charset 'UTF-8';
 
-@use 'config/accesibilidad';
-@use 'config/color';
+// css vars
+@import 'config/accesibilidad';
+@import 'config/color';
 
-@use 'src/_base';
+// sass maps
+@import 'config/elemento.scss';
+@import 'config/estructura.scss';
 
-@use 'src/elemento/titulo';
-@use 'src/elemento/texto';
-@use 'src/elemento/codigo';
-@use 'src/elemento/acordeon';
-@use 'src/elemento/imagen';
-@use 'src/elemento/lista';
-@use 'src/elemento/tabla';
-@use 'src/elemento/enlace';
-@use 'src/elemento/boton';
-@use 'src/elemento/etiqueta';
-@use 'src/elemento/navegacion';
-@use 'src/elemento/menu';
+@import 'config/adaptabilidad.scss';
 
-@use 'src/estructura/contenedor';
-@use 'src/estructura/reticula';
-@use 'src/estructura/margen';
+// estilos
+@import 'src/_guanabana_style';

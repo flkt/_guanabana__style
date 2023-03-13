@@ -1,67 +1,73 @@
 @use 'sass:map';
-@use '../../config/variables_generales.scss' as var;
 
-// $espaciado: map.get(var.$navegacion, 'espaciado-base');
-
+// TODO: aca falta un monton de trabajo, no me gusta como quedo u.u
+// TODO: revisar porque el zindex es menor que el de detail/summary
 nav {
-    background-color: map.get(var.$navegacion, 'background-color');
-    border-color: map.get(var.$navegacion, 'border-color');
-    border-width: map.get(var.$navegacion, 'border-width');
-    backdrop-filter: blur(map.get(var.$navegacion, 'blur'));
-    box-shadow: map.get(var.$navegacion, 'box-shadow') map.get(var.$navegacion, 'box-shadow-color');
+  background-color: map.get($nav, 'background-color');
+  border-color: map.get($nav, 'border-color');
+  border-width: map.get($nav, 'border-width');
+  backdrop-filter: blur(map.get($nav, 'blur'));
+  box-shadow: map.get($nav, 'box-shadow') map.get($nav, 'box-shadow-color');
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  position: sticky;
+  top: 0;
+
+  ul {
     display: flex;
-    overflow-x: auto;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    ul {
-        display: flex;
-        align-items: center;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    > * {
-        display: inline-flex;
-        align-items: center;
-    }
-    
-    a, .nav-enlace {
-        background-color: map.get(var.$navegacion, 'nav-link', 'base', 'background-color');
-        color: map.get(var.$navegacion, 'nav-link', 'base', 'color');
-        font-size: map.get(var.$navegacion, 'nav-link', 'font-size');
-        display: inline-flex;
-        text-decoration: none;
-        padding: map.get(var.$navegacion, 'nav-link', 'padding');
-        margin: map.get(var.$navegacion, 'nav-link', 'margin');
-        &:hover, &:active, &:focus {
-            background-color: map.get(var.$navegacion, 'nav-link', 'hover', 'background-color');
-            color: map.get(var.$navegacion, 'nav-link', 'hover', 'color');
-            outline: none;
-        }
-    }
-    > ul:first-child > li:first-child > a:first-child {
-        margin-left: calc(map.get(var.$navegacion, 'nav-link', 'padding') * -1);
-    }
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-    button, .nav-boton {
-        background-color: map.get(var.$navegacion, 'nav-button', 'base', 'background-color');
-        border-color: map.get(var.$navegacion, 'nav-button', 'base', 'border-color');
-        color: map.get(var.$navegacion, 'nav-button', 'base', 'color');
-        border-width: map.get(var.$navegacion, 'nav-button', 'border-width');
-        border-radius: map.get(var.$navegacion, 'nav-button', 'border-radius');
-        border-style: solid;
-        font-size: map.get(var.$navegacion, 'nav-button', 'font-size');
-        margin: map.get(var.$navegacion, 'nav-button', 'margin');
-        padding: map.get(var.$navegacion, 'nav-button', 'padding');
-        &:hover, &:active, &:focus {
-            background-color: map.get(var.$navegacion, 'nav-button', 'hover', 'background-color');
-            border-color: map.get(var.$navegacion, 'nav-button', 'hover', 'border-color');
-            color: map.get(var.$navegacion, 'nav-button', 'hover', 'color');
-        }
-    }
+  >* {
+    display: inline-flex;
+    align-items: center;
+  }
 
-    // .nav-logo {
-    //     display: inline-flex;
-    // }
+  a,
+  .nav-enlace {
+    background-color: map.get($nav, 'nav-link', 'base', 'background-color');
+    color: map.get($nav, 'nav-link', 'base', 'color');
+    font-size: map.get($nav, 'nav-link', 'font-size');
+    display: inline-flex;
+    text-decoration: none;
+    padding: map.get($nav, 'nav-link', 'padding');
+    margin: map.get($nav, 'nav-link', 'margin');
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: map.get($nav, 'nav-link', 'hover', 'background-color');
+      color: map.get($nav, 'nav-link', 'hover', 'color');
+      outline: none;
+    }
+  }
+
+  >ul:first-child>li:first-child>a:first-child {
+    margin-left: calc(map.get($nav, 'nav-link', 'padding') * -1);
+  }
+
+  button,
+  .nav-boton {
+    background-color: map.get($nav, 'nav-button', 'base', 'background-color');
+    border-color: map.get($nav, 'nav-button', 'base', 'border-color');
+    color: map.get($nav, 'nav-button', 'base', 'color');
+    border-width: map.get($nav, 'nav-button', 'border-width');
+    border-radius: map.get($nav, 'nav-button', 'border-radius');
+    border-style: solid;
+    font-size: map.get($nav, 'nav-button', 'font-size');
+    margin: map.get($nav, 'nav-button', 'margin');
+    padding: map.get($nav, 'nav-button', 'padding');
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: map.get($nav, 'nav-button', 'hover', 'background-color');
+      border-color: map.get($nav, 'nav-button', 'hover', 'border-color');
+      color: map.get($nav, 'nav-button', 'hover', 'color');
+    }
+  }
 }

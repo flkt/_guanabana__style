@@ -1,0 +1,127 @@
+@use "sass:map";
+// variables de SASS que deben compilarse
+// los breakpoints no se pueden utilizar como variables de css
+$breakpoints: (
+  'cel': 320px,
+  'lap': 768px,
+  'esc': 1280px
+);
+
+// elementos adaptables
+$heading-font-responsive: (
+  'adaptable': (
+    'cel': (
+      '.titulo': (
+        'font-size': 3rem,
+      ),
+      '.subtitulo': (
+        'font-size': 1.8rem,
+      )
+    ),
+    'lap': (
+      '.titulo': (
+        'font-size': 3.6rem,
+      ),
+      '.subtitulo': (
+        'font-size': 2rem,
+      )
+    ),
+    'esc': (
+      '.titulo': (
+        'font-size': 4.4rem,
+      ),
+      '.subtitulo': (
+        'font-size': 2.2rem,
+      )
+    )
+  )
+);
+$heading-font: map.merge($heading-font, $heading-font-responsive);
+
+$paragraph-font-responsive: (
+  'adaptable': (
+    'cel': (
+      '.resaltado': (
+        'font-size': 1.5rem,
+      )
+    ),
+    'lap': (
+      '.resaltado': (
+        'font-size': 1.8rem,
+      )
+    ),
+    'esc': (
+      '.resaltado': (
+        'font-size': 2.2rem,
+      )
+    ),
+  )
+);
+$paragraph-font: map.merge($paragraph-font, $paragraph-font-responsive);
+
+// estructura
+$container-responsive: (
+  'adaptable': (
+    'cel': (
+      'ancho-maximo': 100%,
+      'ancho-lectura': 100%,
+      'margen-interior': map.get($margen, '3')
+    ),
+    'lap': (
+      'ancho-maximo': 100%,
+      'ancho-lectura': 600px,
+      'margen-interior': map.get($margen, '4')
+    ),
+    'esc': (
+      'ancho-maximo': 100%,
+      'ancho-lectura': 720px,
+      'margen-interior': map.get($margen, '5')
+    )
+  )
+);
+$container: map.merge($container, $container-responsive);
+
+$reticula-responsive: (
+  'adaptable': (
+    'cel': (
+      'column-gap': map.get($margen, '3'),
+      'grid-template-columns': 3,
+      'grid-equivalencias': (
+        '.c-1': 1,
+        '.c-2': 1,
+        '.c-3': 1,
+        '.c-4': 2,
+        '.c-5': 2,
+        '.c-6': 2,
+        '.c-7': 3,
+      ),
+    ),
+    'lap': (
+      'column-gap': map.get($margen, '4'),
+      'grid-template-columns': 5,
+      'grid-equivalencias': (
+        '.c-1': 1,
+        '.c-2': 2,
+        '.c-3': 2,
+        '.c-4': 3,
+        '.c-5': 3,
+        '.c-6': 4,
+        '.c-7': 5,
+      ),
+    ),
+    'esc': (
+      'column-gap': map.get($margen, '5'),
+      'grid-template-columns': 7,
+      'grid-equivalencias': (
+        '.c-1': 1,
+        '.c-2': 2,
+        '.c-3': 3,
+        '.c-4': 4,
+        '.c-5': 5,
+        '.c-6': 6,
+        '.c-7': 7,
+      ),
+    )
+  )
+);
+$reticula: map.merge($reticula, $reticula-responsive);

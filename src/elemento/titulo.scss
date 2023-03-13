@@ -1,41 +1,55 @@
 @use 'sass:map';
-@use '../../config/variables_generales.scss' as var;
 
 @mixin heading {
-    font-family: map.get(var.$heading-font, 'family');
-    font-weight: map.get(var.$heading-font, 'weight');
-    font-style: map.get(var.$heading-font, 'style');
-    font-size: 1rem;
-    line-height: calc(1em + .5rem);
-    color: var(--heading-font-color);
+  font-family: map.get($heading-font, 'family');
+  font-weight: map.get($heading-font, 'weight');
+  font-style: map.get($heading-font, 'style');
+  font-size: 1rem;
+  line-height: calc(1em + .5rem);
+  color: var(--heading-font-color);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    @include heading;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include heading;
 }
 
-@if map.has-key(var.$heading-font, 'elements') {
-    @each $elemento, $atributos in map.get(var.$heading-font, 'elements') {
+@if map.has-key($heading-font, 'elements') {
+
+  @each $elemento,
+  $atributos in map.get($heading-font, 'elements') {
+    #{$elemento} {
+      @include heading;
+
+      @each $atributo,
+      $valor in $atributos {
+        #{$atributo}: #{$valor};
+      }
+    }
+  }
+}
+
+@if map.has-key($heading-font, 'adaptable') {
+
+  @each $dispositivo,
+  $elementos in map.get($heading-font, 'adaptable') {
+    @media screen and (min-width: map.get($breakpoints, #{$dispositivo})) {
+
+      @each $elemento,
+      $atributos in $elementos {
         #{$elemento} {
-            @include heading;
-            @each $atributo, $valor in $atributos {
-                #{$atributo}: #{$valor};
-            }
-        }
-    }
-}
+          @include heading;
 
-@if map.has-key(var.$heading-font, 'responsive') {
-    @each $dispositivo, $elementos in map.get(var.$heading-font, 'responsive') {
-        @media screen and (min-width: map.get(var.$breakpoints, #{$dispositivo})) {
-            @each $elemento, $atributos in $elementos {
-                #{$elemento} {
-                    @include heading;
-                    @each $atributo, $valor in $atributos {
-                        #{$atributo}: #{$valor};
-                    }
-                }
-            }
+          @each $atributo,
+          $valor in $atributos {
+            #{$atributo}: #{$valor};
+          }
         }
+      }
     }
+  }
 }

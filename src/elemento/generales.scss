@@ -1,0 +1,122 @@
+@use 'sass:map';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: clamp(map.get($main-font, 'minimo'), var(--main-font-size), map.get($main-font, 'maximo'));
+}
+
+body {
+  background-color: var(--main-background-color);
+  color: var(--main-font-color);
+  font-family: map.get($main-font, 'family');
+  font-weight: map.get($main-font, 'weight');
+  font-style: map.get($main-font, 'style');
+  line-height: calc(1em + .5rem);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+th,
+td {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+section,
+summary,
+form,
+iframe {
+  display: block;
+}
+
+iframe,
+img {
+  border: none;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+figure,
+picture,
+img,
+svg,
+[disabled] {
+  pointer-events: none;
+}
+
+a,
+button,
+summary {
+  transition: all .27s ease-in-out;
+
+  &:focus {
+    outline: solid 2px var(--outline-color);
+  }
+}
+
+a,
+button,
+summary,
+input,
+output,
+select,
+textarea,
+meter,
+::file-selector-button {
+  font: inherit;
+}
+
+a,
+button,
+summary,
+select,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+::file-selector-button {
+  cursor: pointer;
+}
+
+::-webkit-selection {
+  background-color: var(--selection-background-color);
+  color: var(--selection-font-color);
+}
+
+::-moz-selection {
+  background-color: var(--selection-background-color);
+  color: var(--selection-font-color);
+}
+
+::selection {
+  background-color: var(--selection-background-color);
+  color: var(--selection-font-color);
+}

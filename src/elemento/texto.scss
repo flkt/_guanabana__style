@@ -1,88 +1,106 @@
 @use 'sass:map';
-@use '../../config/variables_generales.scss' as var;
 
 @mixin paragraph {
-    font-size: clamp(map.get(var.$main-font, 'minimo'), var(--main-font-size), map.get(var.$main-font, 'maximo'));
-    line-height: calc(1em + .5rem);
-    color: var(--main-font-color);
+  font-size: clamp(map.get($main-font, 'minimo'), var(--main-font-size), map.get($main-font, 'maximo'));
+  line-height: calc(1em + .5rem);
+  color: var(--main-font-color);
 }
 
-p, pre, blockquote {
-    margin-top: map.get(var.$espaciado, 'identado');
-    margin-bottom: map.get(var.$espaciado, 'identado');
+p,
+pre,
+blockquote {
+  margin-top: map.get($espaciado, 'identado');
+  margin-bottom: map.get($espaciado, 'identado');
 }
 
-abbr, ins, mark {
-    font-size: clamp(map.get(var.$main-font, 'minimo'), 1em, map.get(var.$main-font, 'maximo'));
+abbr,
+ins,
+mark {
+  font-size: clamp(map.get($main-font, 'minimo'), 1em, map.get($main-font, 'maximo'));
 }
 
-abbr, ins {
-    text-decoration: none;
+abbr,
+ins {
+  text-decoration: none;
 }
 
 abbr {
-    border-bottom: 1px dotted var(--main-font-color);
-    cursor: help;
+  border-bottom: 1px dotted var(--main-font-color);
+  cursor: help;
 }
 
 ins {
-    border-bottom: 1px dashed var(--main-font-color);
+  border-bottom: 1px dashed var(--main-font-color);
 }
 
-small, sub, sup {
-    font-size: clamp(map.get(var.$main-font, 'minimo'), .75em, map.get(var.$main-font, 'maximo'));
+small,
+sub,
+sup {
+  font-size: clamp(map.get($main-font, 'minimo'), .75em, map.get($main-font, 'maximo'));
 }
 
-sub, sup {
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
 sub {
-    bottom: -.25rem;
+  bottom: -.25rem;
 }
 
 sup {
-    top: -.5rem;
+  top: -.5rem;
 }
 
 mark {
-    background-color: var(--mark-background-color);
-    padding: .25rem .5rem;
+  background-color: var(--mark-background-color);
+  padding: .25rem .5rem;
 }
 
 blockquote {
-    font-size: map.get(var.$paragraph-font, 'blockquote');
-    line-height: calc(1em + .5rem);
-    padding: map.get(var.$espaciado, 'sangria');
-    &::before {
-        font-family: "flkt-font";
-    }
+  font-size: map.get($paragraph-font, 'blockquote');
+  line-height: calc(1em + .5rem);
+  padding: map.get($espaciado, 'sangria');
+
+  &::before {
+    font-family: "flkt-font";
+  }
 }
 
-@if map.has-key(var.$paragraph-font, 'elements') {
-    @each $elemento, $atributos in map.get(var.$paragraph-font, 'elements') {
+@if map.has-key($paragraph-font, 'elements') {
+
+  @each $elemento,
+  $atributos in map.get($paragraph-font, 'elements') {
+    #{$elemento} {
+      @include paragraph;
+
+      @each $atributo,
+      $valor in $atributos {
+        #{$atributo}: #{$valor};
+      }
+    }
+  }
+}
+
+@if map.has-key($paragraph-font, 'adaptable') {
+
+  @each $dispositivo,
+  $elementos in map.get($paragraph-font, 'adaptable') {
+    @media screen and (min-width: map.get($breakpoints, #{$dispositivo})) {
+
+      @each $elemento,
+      $atributos in $elementos {
         #{$elemento} {
-            @include paragraph;
-            @each $atributo, $valor in $atributos {
-                #{$atributo}: #{$valor};
-            }
-        }
-    }
-}
+          @include paragraph;
 
-@if map.has-key(var.$paragraph-font, 'responsive') {
-    @each $dispositivo, $elementos in map.get(var.$paragraph-font, 'responsive') {
-        @media screen and (min-width: map.get(var.$breakpoints, #{$dispositivo})) {
-            @each $elemento, $atributos in $elementos {
-                #{$elemento} {
-                    @include paragraph;
-                    @each $atributo, $valor in $atributos {
-                        #{$atributo}: #{$valor};
-                    }
-                }
-            }
+          @each $atributo,
+          $valor in $atributos {
+            #{$atributo}: #{$valor};
+          }
         }
+      }
     }
+  }
 }

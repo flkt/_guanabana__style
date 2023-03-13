@@ -1,35 +1,44 @@
 @use 'sass:map';
-@use '../../config/variables_generales.scss' as var;
 
 button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-style: solid;
-    &:focus {
-        outline-offset: 0em;
-        outline-width: 0.25em;
-        outline-color: map.get(var.$button, 'outline-color');
-    }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+
+  &:focus {
+    outline-offset: 0em;
+    outline-width: 0.25em;
+    outline-color: map.get($button, 'outline-color');
+  }
 }
 
-@if map.has-key(var.$button, 'styles') {
-    @each $nombre, $elementos in map.get(var.$button, 'styles') {
-        @each $estado, $atributos in $elementos {
-            @if $estado == 'base' {
-                #{$nombre} {
-                    @each $atributo, $valor in $atributos {
-                        #{$atributo}: #{$valor};
-                    }
-                }    
-            }
-            @else {
-                #{$nombre}:#{$estado} {
-                    @each $atributo, $valor in $atributos {
-                        #{$atributo}: #{$valor};
-                    }
-                }
-            }
+@if map.has-key($button, 'styles') {
+
+  @each $nombre,
+  $elementos in map.get($button, 'styles') {
+
+    @each $estado,
+    $atributos in $elementos {
+      @if $estado =='base' {
+        #{$nombre} {
+
+          @each $atributo,
+          $valor in $atributos {
+            #{$atributo}: #{$valor};
+          }
         }
+      }
+
+      @else {
+        #{$nombre}:#{$estado} {
+
+          @each $atributo,
+          $valor in $atributos {
+            #{$atributo}: #{$valor};
+          }
+        }
+      }
     }
+  }
 }

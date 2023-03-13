@@ -60,12 +60,16 @@ guanabana-style.scss
         └── img/
             guanavena-ico.png
             guanavena.png
+├── config/
+    accesibilidad.css  <-  variables de css que se necesitan editar al vuelo para crear las herramientas de accesibilidad
+    color.css  <-  variables de color de cualquier etiqueta, clase, spseudo clase
+    adaptabilidad.scss  <-  arreglos de variables por dispositivo y breakpoints
+    elemento.scss
+    estructura.scss
 └── src/
-    _base.scss  <-  estilos generales o que comparten varias etiquetas
-    _variables_accesibilidad.scss  <-  variables de css que se necesitan editar al vuelo para crear las herramientas de accesibilidad
-    _variables_color.scss  <-  variables de color de cualquier etiqueta, clase, spseudo clase
-    _variables_generales.scss  <-  variables para homologar, crear arreglos de clases y un monton de cosas mas. (quizas deberia dividirla.. jeje)
+    _guanabana_styles.scss  <-  carga todos los archivos de src/
     ├── elemento/
+        generales.scss  <-  estilos generales o que comparten varias etiquetas
         acordeon.scss
         boton.scss
         enlace.scss

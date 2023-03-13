@@ -49,7 +49,9 @@
   --menu-item-outline-color: #4722ff33;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
 }
@@ -72,39 +74,85 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6, a, th, td {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+th,
+td {
   overflow-wrap: break-word;
   hyphens: auto;
 }
 
-article, aside, details, figcaption, figure, footer, header, main, section, summary, form, iframe {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+section,
+summary,
+form,
+iframe {
   display: block;
 }
 
-iframe, img {
+iframe,
+img {
   border: none;
 }
 
-audio, canvas, progress, video {
+audio,
+canvas,
+progress,
+video {
   display: inline-block;
 }
 
-figure, picture, img, svg, [disabled] {
+figure,
+picture,
+img,
+svg,
+[disabled] {
   pointer-events: none;
 }
 
-a, button, summary {
+a,
+button,
+summary {
   transition: all 0.27s ease-in-out;
 }
-a:focus, button:focus, summary:focus {
+a:focus,
+button:focus,
+summary:focus {
   outline: solid 2px var(--outline-color);
 }
 
-a, button, summary, input, output, select, textarea, meter, ::file-selector-button {
+a,
+button,
+summary,
+input,
+output,
+select,
+textarea,
+meter,
+::file-selector-button {
   font: inherit;
 }
 
-a, button, summary, select, input[type=button], input[type=submit], input[type=reset], ::file-selector-button {
+a,
+button,
+summary,
+select,
+input[type=button],
+input[type=submit],
+input[type=reset],
+::file-selector-button {
   cursor: pointer;
 }
 
@@ -123,7 +171,12 @@ a, button, summary, select, input[type=button], input[type=submit], input[type=r
   color: var(--selection-font-color);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -155,16 +208,81 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1em;
 }
 
-p, pre, blockquote {
+@media screen and (min-width: 320px) {
+  .titulo {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: calc(1em + 0.5rem);
+    color: var(--heading-font-color);
+    font-size: 3rem;
+  }
+  .subtitulo {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: calc(1em + 0.5rem);
+    color: var(--heading-font-color);
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .titulo {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: calc(1em + 0.5rem);
+    color: var(--heading-font-color);
+    font-size: 3.6rem;
+  }
+  .subtitulo {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: calc(1em + 0.5rem);
+    color: var(--heading-font-color);
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .titulo {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: calc(1em + 0.5rem);
+    color: var(--heading-font-color);
+    font-size: 4.4rem;
+  }
+  .subtitulo {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: calc(1em + 0.5rem);
+    color: var(--heading-font-color);
+    font-size: 2.2rem;
+  }
+}
+p,
+pre,
+blockquote {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-abbr, ins, mark {
+abbr,
+ins,
+mark {
   font-size: clamp(12px, 1em, 48px);
 }
 
-abbr, ins {
+abbr,
+ins {
   text-decoration: none;
 }
 
@@ -177,11 +295,14 @@ ins {
   border-bottom: 1px dashed var(--main-font-color);
 }
 
-small, sub, sup {
+small,
+sub,
+sup {
   font-size: clamp(12px, 0.75em, 48px);
 }
 
-sub, sup {
+sub,
+sup {
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -225,7 +346,33 @@ blockquote::before {
   font-size: 0.75rem;
 }
 
-code, pre, samp {
+@media screen and (min-width: 320px) {
+  .resaltado {
+    font-size: clamp(12px, var(--main-font-size), 48px);
+    line-height: calc(1em + 0.5rem);
+    color: var(--main-font-color);
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .resaltado {
+    font-size: clamp(12px, var(--main-font-size), 48px);
+    line-height: calc(1em + 0.5rem);
+    color: var(--main-font-color);
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .resaltado {
+    font-size: clamp(12px, var(--main-font-size), 48px);
+    line-height: calc(1em + 0.5rem);
+    color: var(--main-font-color);
+    font-size: 2.2rem;
+  }
+}
+code,
+pre,
+samp {
   font-family: monospace;
   font-weight: 400;
   font-size: 1em;
@@ -334,14 +481,18 @@ picture img {
   max-width: 100%;
 }
 
-ol, ul {
+ol,
+ul {
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding-left: 2rem;
   padding-right: 1rem;
   list-style-position: outside;
 }
-ol ol, ol ul, ul ol, ul ul {
+ol ol,
+ol ul,
+ul ol,
+ul ul {
   margin: 0;
   font-size: max(0.875rem, 12px);
 }
@@ -384,7 +535,8 @@ tbody tr {
   border-bottom: 1px solid var(--line-color);
 }
 
-td, th {
+td,
+th {
   padding: 0.5rem 1rem;
 }
 
@@ -518,7 +670,8 @@ nav > * {
   display: inline-flex;
   align-items: center;
 }
-nav a, nav .nav-enlace {
+nav a,
+nav .nav-enlace {
   background-color: var(--nav-link-background-color);
   color: var(--nav-link-font-color);
   font-size: 1rem;
@@ -527,7 +680,10 @@ nav a, nav .nav-enlace {
   padding: 1rem;
   margin: 0;
 }
-nav a:hover, nav a:active, nav a:focus, nav .nav-enlace:hover, nav .nav-enlace:active, nav .nav-enlace:focus {
+nav a:hover, nav a:active, nav a:focus,
+nav .nav-enlace:hover,
+nav .nav-enlace:active,
+nav .nav-enlace:focus {
   background-color: var(--nav-link-background-color-hover);
   color: var(--nav-link-font-color-hover);
   outline: none;
@@ -535,7 +691,8 @@ nav a:hover, nav a:active, nav a:focus, nav .nav-enlace:hover, nav .nav-enlace:a
 nav > ul:first-child > li:first-child > a:first-child {
   margin-left: -1rem;
 }
-nav button, nav .nav-boton {
+nav button,
+nav .nav-boton {
   background-color: var(--nav-button-background-color);
   border-color: var(--nav-button-background-color);
   color: var(--nav-button-font-color);
@@ -546,7 +703,10 @@ nav button, nav .nav-boton {
   margin: 0.75rem 0.25rem;
   padding: 0.25rem 0.75rem;
 }
-nav button:hover, nav button:active, nav button:focus, nav .nav-boton:hover, nav .nav-boton:active, nav .nav-boton:focus {
+nav button:hover, nav button:active, nav button:focus,
+nav .nav-boton:hover,
+nav .nav-boton:active,
+nav .nav-boton:focus {
   background-color: var(--nav-button-background-color-hover);
   border-color: var(--nav-button-background-color-hover);
   color: var(--nav-button-font-color-hover);
@@ -573,7 +733,8 @@ menu li:first-child .menu-item {
 menu li:last-child .menu-item {
   border-radius: 0 0 6px 6px;
 }
-menu a, menu button {
+menu a,
+menu button {
   display: inline-flex;
   border-radius: 6px;
   padding: 0.25rem 0.5rem;
@@ -614,10 +775,12 @@ menu.menu-horizontal {
   overflow-x: auto;
   max-width: 100%;
 }
-menu.menu-horizontal li:first-child .menu-item, menu.menu-horizontal li:last-child .menu-item {
+menu.menu-horizontal li:first-child .menu-item,
+menu.menu-horizontal li:last-child .menu-item {
   border-radius: 6px;
 }
-menu.menu-horizontal a, menu.menu-horizontal button {
+menu.menu-horizontal a,
+menu.menu-horizontal button {
   margin: 0;
   padding: 0.125rem 0.25rem;
 }
@@ -633,7 +796,12 @@ menu.menu-horizontal .menu-separador {
 }
 
 @media screen and (min-width: 320px) {
-  header, footer, main, article, nav, .contenedor {
+  header,
+  footer,
+  main,
+  article,
+  nav,
+  .contenedor {
     max-width: 100%;
     padding-left: 16px;
     padding-right: 16px;
@@ -643,7 +811,12 @@ menu.menu-horizontal .menu-separador {
   }
 }
 @media screen and (min-width: 768px) {
-  header, footer, main, article, nav, .contenedor {
+  header,
+  footer,
+  main,
+  article,
+  nav,
+  .contenedor {
     max-width: 100%;
     padding-left: 32px;
     padding-right: 32px;
@@ -653,7 +826,12 @@ menu.menu-horizontal .menu-separador {
   }
 }
 @media screen and (min-width: 1280px) {
-  header, footer, main, article, nav, .contenedor {
+  header,
+  footer,
+  main,
+  article,
+  nav,
+  .contenedor {
     max-width: 100%;
     padding-left: 64px;
     padding-right: 64px;
@@ -662,7 +840,11 @@ menu.menu-horizontal .menu-separador {
     max-width: 720px;
   }
 }
-header nav, footer nav, main nav, article nav, .contenedor nav {
+header nav,
+footer nav,
+main nav,
+article nav,
+.contenedor nav {
   padding-left: 0;
   padding-right: 0;
 }

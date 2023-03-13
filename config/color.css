@@ -1,0 +1,58 @@
+:root {
+  --main-background-color: #fff;
+  --main-font-color: #333;
+
+  --outline-color: #4722ff;
+
+  --mark-background-color: #ffe600;
+
+  --code-background-color: #150b2b;
+  --code-font-color: #7afff2;
+  --var-font-color: #00b8a5;
+
+  --heading-font-color: #000;
+
+  --line-color: #ddd;
+  --line-color-bold: #777;
+
+  --selection-background-color: #4722ff;
+  --selection-font-color: #fff;
+
+  --detail-font-color: #333;
+  --detail-font-color-hover: #4722ff;
+
+  --link-font-color: #4722ff;
+  --link-background-color: #00ffae;
+
+  --tag-background-color: #4722ff;
+
+  --button-background-color: transparent;
+  --button-border-color: #4722ff;
+  --button-font-color: #4722ff;
+  --button-background-color-hover: #4722ff;
+  --button-border-color-hover: #4722ff;
+  --button-font-color-hover: #00ffae;
+  --button-outline-color: #4722ff33;
+
+  --nav-background-color: #fff7;
+  --nav-border-color: transparent;
+  --nav-box-shadow-color: transparent;
+  --nav-link-background-color: transparent;
+  --nav-link-font-color: #4722ff;
+  --nav-link-background-color-hover: #4722ff22;
+  --nav-link-font-color-hover: #4722ff;
+  --nav-button-background-color: #4722ff22;
+  --nav-button-font-color: #4722ff;
+  --nav-button-background-color-hover: #4722ff;
+  --nav-button-font-color-hover: #fff;
+
+  --menu-background-color: transparent;
+  --menu-border-color: var(--line-color);
+  --menu-font-color: var(--main-font-color);
+  --menu-item-background-color: transparent;
+  --menu-item-font-color: #4722ff;
+  --menu-item-background-color-hover: #4722ff22;
+  --menu-item-font-color-hover: #4722ff;
+  --menu-item-outline-color: #4722ff33;
+
+}

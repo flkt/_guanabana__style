@@ -1,0 +1,15 @@
+@use "sass:map";
+// variables de SASS que deben compilarse
+// espaciado fijo en pixeles, utilizarlo en elementos de bloque, contenedores y reticula
+$margen: (
+  '0': 0,
+  '1': 4px,
+  '2': 8px,
+  '3': 16px,
+  '4': 32px,
+  '5': 64px
+);
+
+// todas las propiedades de estos elementos son adaptables (resposive) asi que estan en el archivo de adaptibilidad.scss
+$container: ();
+$reticula: ();
