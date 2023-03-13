@@ -5,20 +5,47 @@ Para creacion y configuracion de sistemas de diseño a medida.
 
 
 
+## UTILIZAR ESTE REPO EN OTRO PROYECTO
+instala el repositorio en tu proyecto
+```zsh
+npm i git@github.com:flkt/_guanabana__scss.git
+```
 
-## ambiente local
+si no necesitas modificarle nada importa el archivo de distribucion en el `main.js` de tu proyecto y listo
+```js
+import 'guanabana-style/dist/guanabana-style.css'
+```
+
+si necesitas cambiarle algun valor, color, tamaño, tipografia, reticula, etc...
+
+  1. copia la carpeta de configuracion
+
+  ```zsh
+  cp -R 'node_modules/guanabana-style/config' 'src/styles/config'
+  ```
+  
+  2. agregalo a la hoja general de estilos de tu proyecto
+  ```css
+  @import 'config/_config';
+  @import 'node_modules/guanabana-style/src/_guanabana_style';
+  ```
+
+  3. modifica las variables de los archivos dentro de la carpeta `config/` como requieras 
+
+
+## LEVANTAR EL ENTORNO LOCAL
 Clona el repositorio
-```ssh
+```zsh
 git clone git@github.com:flkt/_guanabana__scss.git
 ```
 
 Instala las dependencias
-```ssh
+```zsh
 npm install
 ```
 
 Levanta el entorno local
-```ssh
+```zsh
 npm run dev
 ```
 
@@ -27,16 +54,16 @@ Abre cualquier navegador con la ruta `http://localhost:3000/`
 
 
 
-## para compilar los archivos de distribución
+## COMPILAR LOS ARCHIVOS DE DISTRIBUCION
 
 Genera el archivo sin comprimir
-```ssh
+```zsh
 npm run build
 ```
 
 ó el archivo minificado con
 
-```ssh
+```zsh
 npm run build-compress
 ```
 
@@ -61,6 +88,7 @@ guanabana-style.scss
             guanavena-ico.png
             guanavena.png
 ├── config/
+    _guanabana_config.scss  <-  carga todos los archivos de config/
     accesibilidad.css  <-  variables de css que se necesitan editar al vuelo para crear las herramientas de accesibilidad
     color.css  <-  variables de color de cualquier etiqueta, clase, spseudo clase
     adaptabilidad.scss  <-  arreglos de variables por dispositivo y breakpoints

@@ -1,14 +1,4 @@
 @charset 'UTF-8';
 
-// css vars
-@import 'config/accesibilidad';
-@import 'config/color';
-
-// sass maps
-@import 'config/elemento.scss';
-@import 'config/estructura.scss';
-
-@import 'config/adaptabilidad.scss';
-
-// estilos
+@import 'config/_guanabana_config';
 @import 'src/_guanabana_style';
