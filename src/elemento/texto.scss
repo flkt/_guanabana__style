@@ -1,20 +1,10 @@
 @use 'sass:map';
-@use '../_variables_generales' as var;
+@use '../../config/variables_generales.scss' as var;
 
 @mixin paragraph {
     font-size: clamp(map.get(var.$main-font, 'minimo'), var(--main-font-size), map.get(var.$main-font, 'maximo'));
     line-height: calc(1em + .5rem);
     color: var(--main-font-color);
-}
-
-@mixin code {
-    font-family: map.get(var.$code-font, 'family');
-    font-weight: map.get(var.$code-font, 'weight');
-    font-size: map.get(var.$code-font, 'size');
-    font-style:  map.get(var.$code-font, 'style');
-    border-radius: 3px;
-    padding: .25rem .5rem;
-    white-space: pre-wrap;
 }
 
 p, pre, blockquote {
@@ -69,28 +59,6 @@ blockquote {
     &::before {
         font-family: "flkt-font";
     }
-}
-
-code, pre, samp {
-    @include code;
-    background-color: var(--code-background-color);
-    border: 1px solid var(--code-background-color);
-    color: var(--code-font-color);
-}
-
-samp::before {
-    content: '\2039 _ ';
-    color: var(--var-font-color);
-}
-
-kbd {
-    @include code;
-    border: 1px solid var(--code-background-color);
-}
-
-var {
-    @include code;
-    color: var(--var-font-color);
 }
 
 @if map.has-key(var.$paragraph-font, 'elements') {

@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use '../_variables_generales' as var;
+@use '../../config/variables_generales.scss' as var;
 
 @each $dispositivo, $contenedor in var.$container {
     @media screen and (min-width: map.get(var.$breakpoints, #{$dispositivo})) {

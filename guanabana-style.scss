@@ -1,11 +1,13 @@
 @charset 'UTF-8';
 
-@use 'src/_variables_accesibilidad';
-@use 'src/_variables_color';
+@use 'config/accesibilidad';
+@use 'config/color';
+
 @use 'src/_base';
 
 @use 'src/elemento/titulo';
 @use 'src/elemento/texto';
+@use 'src/elemento/codigo';
 @use 'src/elemento/acordeon';
 @use 'src/elemento/imagen';
 @use 'src/elemento/lista';

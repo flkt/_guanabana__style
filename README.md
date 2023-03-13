@@ -57,6 +57,9 @@ guanabana-style.scss
         └── css/
             guanabana-style.css
             guanabana-style.css.map
+        └── img/
+            guanavena-ico.png
+            guanavena.png
 └── src/
     _base.scss  <-  estilos generales o que comparten varias etiquetas
     _variables_accesibilidad.scss  <-  variables de css que se necesitan editar al vuelo para crear las herramientas de accesibilidad

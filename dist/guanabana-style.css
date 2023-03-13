@@ -209,6 +209,22 @@ blockquote::before {
   font-family: "flkt-font";
 }
 
+.resaltado {
+  font-size: clamp(12px, var(--main-font-size), 48px);
+  line-height: calc(1em + 0.5rem);
+  color: var(--main-font-color);
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.nota {
+  font-size: clamp(12px, var(--main-font-size), 48px);
+  line-height: calc(1em + 0.5rem);
+  color: var(--main-font-color);
+  font-size: 0.75rem;
+}
+
 code, pre, samp {
   font-family: monospace;
   font-weight: 400;
@@ -247,22 +263,6 @@ var {
   padding: 0.25rem 0.5rem;
   white-space: pre-wrap;
   color: var(--var-font-color);
-}
-
-.resaltado {
-  font-size: clamp(12px, var(--main-font-size), 48px);
-  line-height: calc(1em + 0.5rem);
-  color: var(--main-font-color);
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.nota {
-  font-size: clamp(12px, var(--main-font-size), 48px);
-  line-height: calc(1em + 0.5rem);
-  color: var(--main-font-color);
-  font-size: 0.75rem;
 }
 
 details {
