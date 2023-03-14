@@ -27,7 +27,9 @@ Pero si necesitas cambiarle algun valor, color, tamaño, tipografia, reticula, e
   
   2. Agregalo a la hoja general de estilos de tu proyecto
   ```css
-  @import 'config/_config';
+  @charset "UTF-8";
+
+  @import 'config/_guanabana_config';
   @import 'node_modules/guanabana-style/src/_guanabana_style';
   ```
 
