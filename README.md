@@ -30,7 +30,7 @@ Pero si necesitas cambiarle algun valor, color, tamaño, tipografia, reticula, e
   @charset "UTF-8";
 
   @import 'config/_guanabana_config';
-  @import 'node_modules/guanabana-style/src/_guanabana_style';
+  @import '../../node_modules/guanabana-style/src/_guanabana_style';
   ```
 
 
