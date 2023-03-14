@@ -55,5 +55,8 @@
   --menu-item-font-color-hover: #4722ff;
   --menu-item-outline-color: #4722ff33;
 }
-/* TODO */
-@media (prefers-color-scheme: dark) { :root {} }
+
+/* 
+  TODO 
+  @media (prefers-color-scheme: dark) { :root {} }
+*/

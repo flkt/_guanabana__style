@@ -1,39 +1,38 @@
 # _guanabana__style
 
 Normalizador de estilos en etiquetas de HTML con variables configurables para la creación de clases, creación de temas de color, retículas (grid) y funciones de accesibilidad. 
+
 Para creacion y configuracion de sistemas de diseño a medida.
 
 
 
-## UTILIZAR ESTE REPO EN OTRO PROYECTO
-instala el repositorio en tu proyecto
+## cómo utilizar este repo en otro proyecto
+Instala el repositorio en tu proyecto
 ```zsh
 npm i git@github.com:flkt/_guanabana__scss.git
 ```
 
-si no necesitas modificarle nada importa el archivo de distribucion en el `main.js` de tu proyecto y listo
+Si no necesitas modificarle nada importa el archivo de distribucion en el `main.js` de tu proyecto y listo
 ```js
 import 'guanabana-style/dist/guanabana-style.css'
 ```
 
-si necesitas cambiarle algun valor, color, tamaño, tipografia, reticula, etc...
+Pero si necesitas cambiarle algun valor, color, tamaño, tipografia, reticula, etc... Puedes modificar las variables de los archivos dentro de la carpeta `config/` tanto como requieras 
 
-  1. copia la carpeta de configuracion
+  1. Copia la carpeta de configuracion
 
   ```zsh
   cp -R 'node_modules/guanabana-style/config' 'src/styles/config'
   ```
   
-  2. agregalo a la hoja general de estilos de tu proyecto
+  2. Agregalo a la hoja general de estilos de tu proyecto
   ```css
   @import 'config/_config';
   @import 'node_modules/guanabana-style/src/_guanabana_style';
   ```
 
-  3. modifica las variables de los archivos dentro de la carpeta `config/` como requieras 
 
-
-## LEVANTAR EL ENTORNO LOCAL
+## levantar el entorno local
 Clona el repositorio
 ```zsh
 git clone git@github.com:flkt/_guanabana__scss.git
@@ -54,7 +53,7 @@ Abre cualquier navegador con la ruta `http://localhost:3000/`
 
 
 
-## COMPILAR LOS ARCHIVOS DE DISTRIBUCION
+## compilar los archivos de distribución
 
 Genera el archivo sin comprimir
 ```zsh
@@ -70,7 +69,7 @@ npm run build-compress
 
 
 
-## estructura
+## estructura del proyecto
 
 ```text
 index.js   <- solo pa levantar el entorno local
